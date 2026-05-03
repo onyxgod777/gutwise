@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GutWise — Reclaim Your Vitality From Within</title>
+    <meta name="description" content="Discover how gut health shapes your energy, mood, and clarity. Simple, science-backed wisdom for a stronger you." />
+    <style>
+        /* ── Reset & Base ── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1a1a2e;
+            background: #faf9f6;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── Typography ── */
+        h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+        h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 16px; }
+        h3 { font-size: 1.2rem; margin-bottom: 8px; }
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(135deg, #0d3b2e 0%, #1a5a3a 50%, #2d6a4f 100%);
+            color: #fff;
+            padding: 80px 0 64px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero h1 { margin-bottom: 16px; }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            color: rgba(255,255,255,0.85);
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #fbbf24;
+            color: #0d3b2e;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 14px 40px;
+            border-radius: 40px;
+            transition: transform .2s, box-shadow .2s;
+            box-shadow: 0 4px 14px rgba(251,191,36,0.35);
+        }
+        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(251,191,36,0.45); }
+
+        /* ── Sections ── */
+        section { padding: 72px 0; }
+        section:nth-child(even) { background: #fff; }
+
+        /* ── Philosophy / Wisdom ── */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .wisdom-card {
+            background: #f3f4f6;
+            border-radius: 16px;
+            padding: 28px 24px;
+            transition: transform .2s;
+        }
+        .wisdom-card:hover { transform: translateY(-4px); }
+        .wisdom-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .wisdom-card h3 { color: #0d3b2e; }
+
+        /* ── Principles list ── */
+        .principles { list-style: none; margin-top: 20px; }
+        .principles li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .principles li::before { content: '🌱'; flex-shrink: 0; }
+        .principles li:last-child { border-bottom: none; }
+
+        /* ── Products ── */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .product-card {
+            background: #faf9f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 28px 24px;
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .product-card:hover {
+            border-color: #2d6a4f;
+            box-shadow: 0 8px 24px rgba(45,106,79,0.1);
+        }
+        .product-card .rating {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .product-card h3 { font-size: 1.1rem; }
+        .product-card p { font-size: 0.9rem; color: #4b5563; margin-bottom: 16px; }
+        .product-link {
+            display: inline-block;
+            background: #0d3b2e;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 24px;
+            border-radius: 30px;
+            transition: background .2s;
+        }
+        .product-link:hover { background: #1a5a3a; }
+
+        /* ── How It Works ── */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .step {
+            text-align: center;
+            padding: 24px 16px;
+        }
+        .step .num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            background: #0d3b2e;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-radius: 50%;
+        }
+        .step h3 { font-size: 1rem; }
+        .step p { font-size: 0.9rem; color: #4b5563; }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: linear-gradient(135deg, #0d3b2e, #2d6a4f);
+            color: #fff;
+            text-align: center;
+            padding: 64px 24px;
+        }
+        .cta-banner h2 { margin-bottom: 12px; }
+        .cta-banner p { color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto 28px; }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+        footer a { color: #0d3b2e; text-decoration: underline; }
+
+        /* ── Responsive tweaks ── */
+        @media (max-width: 640px) {
+            section { padding: 48px 0; }
+            .hero { padding: 56px 0 48px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Gut Knows<br />What You Need.</h1>
+            <p>
+                Energy, mood, clarity — it all starts in your microbiome.
+                Discover the natural path to a stronger, more vibrant you.
+            </p>
+            <a href="#products" class="hero-cta">See the Top Gut Health Products →</a>
+        </div>
+    </section>
+
+    <!-- ═══ PHILOSOPHY ═══ -->
+    <section id="philosophy">
+        <div class="container">
+            <span class="section-label">The Foundation</span>
+            <h2>Health Is Self-Responsibility</h2>
+            <p style="max-width: 680px; color: #4b5563;">
+                True wellbeing isn't found in a pill or a quick fix — it's built through
+                knowledge, discipline, and alignment with your body's natural laws.
+                Ancient wisdom and modern science agree: the gut is the root.
+            </p>
+            <div class="philosophy-grid">
+                <div class="wisdom-card">
+                    <div class="icon">🧠</div>
+                    <h3>Gut-Brain Axis</h3>
+                    <p style="font-size:0.9rem;color:#4b5563;">
+                        Your gut produces ~90% of your body's serotonin — the same
+                        neurotransmitter that regulates mood, sleep, and emotional balance.
+                        Heal the gut, calm the mind.
+                    </p>
+                </div>
+                <div class="wisdom-card">
+                    <div class="icon">⚖️</div>
+                    <h3>Natural Laws</h3>
+                    <p style="font-size:0.9rem;color:#4b5563;">
+                        Your body follows creational principles — cause and effect,
+                        balance, regeneration. Work <em>with</em> these laws, not against them,
+                        and vitality follows naturally.
+                    </p>
+                </div>
+                <div class="wisdom-card">
+                    <div class="icon">🌿</div>
+                    <h3>Self-Discipline</h3>
+                    <p style="font-size:0.9rem;color:#4b5563;">
+                        No one can heal your body for you. True change requires
+                        consistent, intentional choices — the only path to lasting freedom
+                        and strength.
+                    </p>
+                </div>
+            </div>
+            <ul class="principles" style="max-width: 600px; margin-top: 32px;">
+                <li><strong>Self-responsibility</strong> — your health is your domain</li>
+                <li><strong>Knowledge over blind faith</strong> — understand what you put in your body</li>
+                <li><strong>Consistency over intensity</strong> — small daily habits compound</li>
+                <li><strong>Mind-body connection</strong> — what you eat shapes what you think</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═══ THE SCIENCE ═══ -->
+    <section>
+        <div class="container">
+            <span class="section-label">The Science</span>
+            <h2>Why Gut Health Changes Everything</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:32px;">
+                <div>
+                    <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">90%</h3>
+                    <p style="color:#4b5563;font-size:0.9rem;">of your body's serotonin is produced in your gut, not your brain.</p>
+                </div>
+                <div>
+                    <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">70%</h3>
+                    <p style="color:#4b5563;font-size:0.9rem;">of your immune system lives in your digestive tract.</p>
+                </div>
+                <div>
+                    <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">100M</h3>
+                    <p style="color:#4b5563;font-size:0.9rem;">neurons line your gut — more than in your spinal cord.</p>
+                </div>
+            </div>
+            <p style="margin-top:24px;font-size:0.95rem;color:#4b5563;max-width:600px;">
+                <strong>The Pineal Gland Connection:</strong> A healthy gut supports your pineal gland
+                (the "third eye"), which regulates sleep, melatonin production, and your ability
+                to perceive beyond the purely material — your 7th sense, <em>Empfindung</em>.
+                When your gut thrives, your whole being thrives.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══ PRODUCTS ═══ -->
+    <section id="products">
+        <div class="container">
+            <span class="section-label">Top Picks</span>
+            <h2>Trusted Gut Health Products</h2>
+            <p style="color:#4b5563;max-width:560px;">
+                These are currently the highest-rated gut health supplements on ClickBank —
+                chosen by thousands for real results.
+            </p>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <span class="rating">⭐ #1 Pick</span>
+                    <h3>Cardio Slim Tea</h3>
+                    <p>Natural tea blend with green tea, ginger, hibiscus, oolong &amp; dandelion. Supports heart health, digestion, and natural energy.</p>
+                    <a href="https://0f34d7vk3241iv89pmgbscperj.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="rating">🔥 Also Great</span>
+                    <h3>All Day Slimming Tea</h3>
+                    <p>Powerful natural tea blend inspired by traditional Costa Rican recipes. Supports detox, weight loss, better digestion &amp; sleep.</p>
+                    <a href="https://7424203q4a5z95g2pmmavhza0j.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="rating">💪 Combo</span>
+                    <h3>Your Gut, Your Rules</h3>
+                    <p>Pick one and commit to 30 days. Consistency over intensity — the natural law of real transformation.</p>
+                    <a href="https://0f34d7vk3241iv89pmgbscperj.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Get Started →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS ═══ -->
+    <section>
+        <div class="container">
+            <span class="section-label">Simple Steps</span>
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="num">1</div>
+                    <h3>Choose Your Product</h3>
+                    <p>Browse our curated picks — all backed by real user results.</p>
+                </div>
+                <div class="step">
+                    <div class="num">2</div>
+                    <h3>Click &amp; Order</h3>
+                    <p>You're redirected to the official product page. Safe, secure, no middleman.</p>
+                </div>
+                <div class="step">
+                    <div class="num">3</div>
+                    <h3>Start Your Journey</h3>
+                    <p>Commit to 30 days of consistency. Listen to your body. Feel the change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <div class="cta-banner">
+        <h2>Ready To Feel Whole Again?</h2>
+        <p>Your body has the wisdom. Give it what it needs to heal, restore, and thrive.</p>
+        <a href="#products" class="hero-cta">Browse Products →</a>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom:4px;">
+                <strong>GutWise</strong> — Helping you reclaim vitality through knowledge and natural choices.
+            </p>
+            <p>
+                This site contains affiliate links. We may earn a commission at no extra cost to you.
+                Always consult a healthcare professional before starting any supplement.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
