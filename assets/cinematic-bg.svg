@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1a0f" />
+      <stop offset="40%" stop-color="#0d3b2e" />
+      <stop offset="70%" stop-color="#1a5a3a" />
+      <stop offset="100%" stop-color="#2d6a4f" />
+    </linearGradient>
+    <!-- Golden light rays -->
+    <linearGradient id="sunRay" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#fcd34d" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
+    </linearGradient>
+    <!-- Mist gradient -->
+    <radialGradient id="mist1" cx="30%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="mist2" cx="70%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0" />
+    </radialGradient>
+    <!-- Tree trunk gradient -->
+    <linearGradient id="trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a1a0f" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#162e1a" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#0a1a0f" stop-opacity="0.85" />
+    </linearGradient>
+    <!-- Foliage gradient -->
+    <radialGradient id="foliageDark" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#0d3b2e" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0a1a0f" stop-opacity="0.9" />
+    </radialGradient>
+    <radialGradient id="foliageMid" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#1a5a3a" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#0d3b2e" stop-opacity="0.8" />
+    </radialGradient>
+    <radialGradient id="foliageAccent" cx="50%" cy="20%" r="45%">
+      <stop offset="0%" stop-color="#2d6a4f" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#1a5a3a" stop-opacity="0.6" />
+    </radialGradient>
+    <!-- Light dust particles -->
+    <radialGradient id="particle">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
+    </radialGradient>
+    <!-- Bottom ground fog -->
+    <linearGradient id="groundFog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a5a3a" stop-opacity="0" />
+      <stop offset="60%" stop-color="#0d3b2e" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0a1a0f" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="1440" height="900" fill="url(#sky)" />
+
+  <!-- Golden sun glow from top center-right -->
+  <ellipse cx="1080" cy="-80" rx="600" ry="400" fill="url(#sunGlow)" />
+  <polygon points="1080,0 800,900 1360,900" fill="url(#sunRay)" opacity="0.3" />
+  <polygon points="1080,0 700,900 1460,900" fill="url(#sunRay)" opacity="0.15" />
+  <polygon points="1080,0 900,900 1260,900" fill="url(#sunRay)" opacity="0.2" />
+
+  <!-- === BACKGROUND FOREST LAYER (farthest) === -->
+  <!-- Left cluster -->
+  <ellipse cx="80" cy="360" rx="120" ry="160" fill="url(#foliageDark)" />
+  <ellipse cx="200" cy="340" rx="100" ry="140" fill="url(#foliageDark)" />
+  <ellipse cx="150" cy="320" rx="140" ry="120" fill="url(#foliageDark)" />
+
+  <!-- Mid-left -->
+  <ellipse cx="340" cy="330" rx="110" ry="150" fill="url(#foliageMid)" />
+  <ellipse cx="460" cy="350" rx="90" ry="130" fill="url(#foliageMid)" />
+  <ellipse cx="400" cy="310" rx="130" ry="110" fill="url(#foliageMid)" />
+
+  <!-- Center -->
+  <ellipse cx="600" cy="320" rx="120" ry="160" fill="url(#foliageDark)" />
+  <ellipse cx="720" cy="340" rx="100" ry="140" fill="url(#foliageDark)" />
+  <ellipse cx="660" cy="300" rx="140" ry="120" fill="url(#foliageDark)" />
+
+  <!-- Center-right -->
+  <ellipse cx="880" cy="330" rx="130" ry="150" fill="url(#foliageMid)" />
+  <ellipse cx="1000" cy="350" rx="90" ry="130" fill="url(#foliageMid)" />
+  <ellipse cx="940" cy="310" rx="120" ry="110" fill="url(#foliageMid)" />
+
+  <!-- Right -->
+  <ellipse cx="1140" cy="340" rx="110" ry="140" fill="url(#foliageDark)" />
+  <ellipse cx="1280" cy="360" rx="100" ry="130" fill="url(#foliageDark)" />
+  <ellipse cx="1360" cy="350" rx="130" ry="120" fill="url(#foliageDark)" />
+
+  <!-- === MID FOREST LAYER === -->
+  <!-- Tree trunks -->
+  <rect x="60" y="280" width="14" height="620" fill="url(#trunk)" rx="3" />
+  <rect x="200" y="260" width="12" height="640" fill="url(#trunk)" rx="3" />
+  <rect x="340" y="270" width="16" height="630" fill="url(#trunk)" rx="4" />
+  <rect x="500" y="250" width="11" height="650" fill="url(#trunk)" rx="3" />
+  <rect x="640" y="260" width="15" height="640" fill="url(#trunk)" rx="4" />
+  <rect x="790" y="240" width="13" height="660" fill="url(#trunk)" rx="3" />
+  <rect x="920" y="270" width="14" height="630" fill="url(#trunk)" rx="3" />
+  <rect x="1080" y="250" width="12" height="650" fill="url(#trunk)" rx="3" />
+  <rect x="1220" y="260" width="16" height="640" fill="url(#trunk)" rx="4" />
+  <rect x="1370" y="280" width="12" height="620" fill="url(#trunk)" rx="3" />
+
+  <!-- Foliage on mid layer -->
+  <ellipse cx="80" cy="280" rx="70" ry="80" fill="url(#foliageMid)" />
+  <ellipse cx="200" cy="260" rx="60" ry="70" fill="url(#foliageMid)" />
+  <ellipse cx="340" cy="260" rx="75" ry="85" fill="url(#foliageMid)" />
+  <ellipse cx="500" cy="250" rx="65" ry="75" fill="url(#foliageMid)" />
+  <ellipse cx="640" cy="250" rx="80" ry="90" fill="url(#foliageMid)" />
+  <ellipse cx="790" cy="240" rx="70" ry="80" fill="url(#foliageMid)" />
+  <ellipse cx="920" cy="260" rx="65" ry="75" fill="url(#foliageMid)" />
+  <ellipse cx="1080" cy="250" rx="75" ry="85" fill="url(#foliageMid)" />
+  <ellipse cx="1220" cy="260" rx="70" ry="80" fill="url(#foliageMid)" />
+  <ellipse cx="1370" cy="280" rx="60" ry="70" fill="url(#foliageMid)" />
+
+  <!-- === ACCENT FOLIAGE (highlighted by light) === -->
+  <ellipse cx="640" cy="230" rx="50" ry="60" fill="url(#foliageAccent)" />
+  <ellipse cx="790" cy="220" rx="45" ry="55" fill="url(#foliageAccent)" />
+  <ellipse cx="1080" cy="230" rx="55" ry="65" fill="url(#foliageAccent)" />
+
+  <!-- === ATMOSPHERIC MIST === -->
+  <ellipse cx="350" cy="580" rx="400" ry="140" fill="url(#mist1)" />
+  <ellipse cx="1050" cy="620" rx="450" ry="160" fill="url(#mist2)" />
+  <ellipse cx="720" cy="550" rx="300" ry="100" fill="url(#mist1)" opacity="0.5" />
+
+  <!-- === LIGHT DUST / BIOLUMINESCENT PARTICLES === -->
+  <circle cx="600" cy="200" r="1.5" fill="#fbbf24" opacity="0.4" />
+  <circle cx="750" cy="180" r="1" fill="#fbbf24" opacity="0.3" />
+  <circle cx="850" cy="220" r="1.5" fill="#fbbf24" opacity="0.35" />
+  <circle cx="950" cy="190" r="1" fill="#fbbf24" opacity="0.25" />
+  <circle cx="680" cy="240" r="1.2" fill="#fbbf24" opacity="0.3" />
+  <circle cx="1050" cy="210" r="1.5" fill="#fbbf24" opacity="0.35" />
+  <circle cx="550" cy="230" r="1" fill="#fbbf24" opacity="0.2" />
+  <circle cx="1150" cy="195" r="1.2" fill="#fbbf24" opacity="0.25" />
+  <circle cx="450" cy="250" r="0.8" fill="#fbbf24" opacity="0.2" />
+  <circle cx="1250" cy="220" r="1" fill="#fbbf24" opacity="0.2" />
+  <circle cx="700" cy="160" r="0.8" fill="#fbbf24" opacity="0.3" />
+  <circle cx="900" cy="175" r="1.2" fill="#fbbf24" opacity="0.25" />
+
+  <!-- === GROUND / FLOOR FOG === -->
+  <rect x="0" y="650" width="1440" height="250" fill="url(#groundFog)" />
+
+  <!-- === FOREGROUND SILHOUETTE GRASS === -->
+  <path d="M0 720 Q20 700 40 710 Q60 690 80 705 Q100 680 120 700 Q140 685 160 695 Q180 670 200 690 Q220 675 240 685 Q260 660 280 680 Q300 665 320 675 Q340 650 360 670 Q380 655 400 665 Q420 640 440 660 Q460 645 480 655 Q500 630 520 650 Q540 635 560 645 Q580 620 600 640 Q620 625 640 635 Q660 610 680 630 Q700 615 720 625 Q740 600 760 620 Q780 605 800 615 Q820 590 840 610 Q860 595 880 605 Q900 580 920 600 Q940 585 960 595 Q980 570 1000 590 Q1020 575 1040 585 Q1060 560 1080 580 Q1100 565 1120 575 Q1140 550 1160 570 Q1180 555 1200 565 Q1220 540 1240 560 Q1260 545 1280 555 Q1300 530 1320 550 Q1340 535 1360 545 Q1380 520 1400 540 Q1420 525 1440 535 L1440 900 L0 900Z" fill="#0a1a0f" opacity="0.6" />
+
+  <!-- Light ray crossing through foreground (cinematic lens flare) -->
+  <ellipse cx="1080" cy="500" rx="3" ry="200" fill="#fbbf24" opacity="0.04" transform="rotate(-15 1080 500)" />
+  <ellipse cx="1050" cy="450" rx="2" ry="180" fill="#fcd34d" opacity="0.03" transform="rotate(-22 1050 450)" />
+</svg>
