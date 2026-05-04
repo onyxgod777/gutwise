@@ -231,18 +231,30 @@
     <!-- ═══ HERO ═══ -->
     <section class="hero">
         <div class="container">
-            <!-- Logo -->
-            <svg class="hero-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="GutWise leaf logo">
+            <!-- Logo: leaf + GutWise initial -->
+            <svg class="hero-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="GutWise leaf logo">
                 <defs>
-                    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#fbbf24" />
                         <stop offset="100%" stop-color="#f59e0b" />
                     </linearGradient>
                 </defs>
-                <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
-                <path d="M30 58 Q38 40 50 36 Q62 32 68 46 Q72 54 64 60 Q56 66 48 62 Q36 56 30 58Z" fill="rgba(255,255,255,0.12)" />
-                <path d="M36 46 Q42 36 52 34 Q60 32 64 42" stroke="url(#leafGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" />
-                <circle cx="50" cy="50" r="3" fill="#fbbf24" />
+                <!-- Outer ring -->
+                <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+                <!-- Leaf body -->
+                <path d="M60 20 Q82 36 86 60 Q90 84 70 92 L60 20Z" fill="rgba(255,255,255,0.15)" />
+                <path d="M60 20 Q38 36 34 60 Q30 84 50 92 L60 20Z" fill="rgba(255,255,255,0.08)" />
+                <!-- Leaf center vein -->
+                <path d="M60 24 L60 80" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round" />
+                <!-- Side veins -->
+                <path d="M60 34 Q70 38 78 40" stroke="url(#lg)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7" />
+                <path d="M60 46 Q70 50 82 52" stroke="url(#lg)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7" />
+                <path d="M60 34 Q50 38 42 40" stroke="url(#lg)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7" />
+                <path d="M60 46 Q50 50 38 52" stroke="url(#lg)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7" />
+                <!-- Stem -->
+                <path d="M60 82 Q58 88 56 96" stroke="url(#lg)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                <!-- Dot accent -->
+                <circle cx="60" cy="60" r="3" fill="#fbbf24"/>
             </svg>
             <h1>Your Gut Knows<br />What You Need.</h1>
             <p>
@@ -395,6 +407,7 @@
         <h2>Ready To Feel Whole Again?</h2>
         <p>Your body has the wisdom. Give it what it needs to heal, restore, and thrive.</p>
         <a href="#products" class="hero-cta">Browse Products →</a>
+        <p style="margin-top:16px;"><a href="blog/" style="color:rgba(255,255,255,0.8);text-decoration:underline;">📖 Read the GutWise Blog →</a></p>
     </div>
 
     <!-- ═══ FOOTER ═══ -->
@@ -409,7 +422,8 @@
             </p>
             <p style="margin-top:12px;font-size:0.8rem;">
                 <a href="privacy.html">Privacy Policy</a> ·
-                <a href="tos.html">Terms of Service</a>
+                <a href="tos.html">Terms of Service</a> ·
+                <a href="blog/">Blog</a>
             </p>
         </div>
     </footer>
