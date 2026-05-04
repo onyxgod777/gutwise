@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gutwise.thealpha-secret.xyz/sitemap.xml
