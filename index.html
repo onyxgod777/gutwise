@@ -34,6 +34,57 @@
         a { color: inherit; text-decoration: none; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
+        /* ── Navigation ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(10,26,15,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(251,191,36,0.1);
+            padding: 0 24px;
+        }
+        nav .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+        nav .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        nav .nav-logo svg { width: 28px; height: 28px; }
+        nav .nav-links { display: flex; gap: 24px; align-items: center; }
+        nav .nav-links a {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color .2s;
+        }
+        nav .nav-links a:hover { color: #fbbf24; }
+        nav .nav-cta {
+            background: #fbbf24;
+            color: #0d3b2e !important;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.82rem;
+            transition: background .2s;
+        }
+        nav .nav-cta:hover { background: #fcd34d; color: #0d3b2e !important; }
+        .nav-spacer { height: 56px; }
+        @media (max-width: 640px) {
+            nav .nav-links a:not(.nav-cta) { display: none; }
+        }
+
         /* ── Typography ── */
         h1, h2, h3 { font-weight: 700; line-height: 1.2; }
         h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
@@ -266,6 +317,30 @@
     </style>
 </head>
 <body>
+
+    <!-- ═══ NAV ═══ -->
+    <nav>
+        <div class="nav-inner">
+            <a href="https://gutwise.thealpha-secret.xyz" class="nav-logo">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="30" fill="#0d3b2e" stroke="#fbbf24" stroke-width="1"/>
+                    <path d="M32 12 Q18 22 16 36 Q14 48 24 54 L32 12Z" fill="rgba(251,191,36,0.2)" stroke="#fbbf24" stroke-width="1.5"/>
+                    <path d="M32 12 Q46 22 48 36 Q50 48 40 54 L32 12Z" fill="rgba(251,191,36,0.1)" stroke="#fbbf24" stroke-width="1"/>
+                    <path d="M32 14 L32 48" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="2.5" fill="#fbbf24"/>
+                </svg>
+                GutWise
+            </a>
+            <div class="nav-links">
+                <a href="#philosophy">Philosophy</a>
+                <a href="#products">Products</a>
+                <a href="blog/">Blog</a>
+                <a href="#products" class="nav-cta">Shop Now →</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-spacer"></div>
 
     <script type="application/ld+json">
     {
