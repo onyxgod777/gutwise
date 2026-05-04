@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Mission Control — GutWise</title>
+<meta name="description" content="GutWise automated systems: daily blog, Moltbook promotion, Telegram channel, legal reviewer, and scheduled content."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d3b2e' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 12 Q18 22 16 36 Q14 48 24 54 L32 12Z' fill='rgba(251,191,36,0.2)' stroke='%23fbbf24' stroke-width='1.5'/%3E%3Cpath d='M32 12 Q46 22 48 36 Q50 48 40 54 L32 12Z' fill='rgba(251,191,36,0.1)' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 14 L32 48' stroke='%23fbbf24' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%23fbbf24'/%3E%3C/svg%3E"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1a1a2e;background:#faf9f6;line-height:1.7}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+a{color:#0d3b2e}
+.page-header{background:linear-gradient(135deg,#0d3b2e 0%,#1a5a3a 50%,#2d6a4f 100%);color:#fff;padding:48px 0 40px;text-align:center}
+.page-header h1{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:8px}
+.page-header p{color:rgba(255,255,255,0.8)}
+.page-header a{color:#fbbf24}
+.content{padding:40px 0 64px}
+.content h2{color:#0d3b2e;font-size:1.3rem;margin:32px 0 12px;border-bottom:2px solid #e5e7eb;padding-bottom:6px}
+.content h2:first-of-type{margin-top:0}
+.content h3{color:#1a5a3a;font-size:1rem;margin:20px 0 8px}
+.content p{color:#374151;margin-bottom:12px}
+.content ul{padding-left:24px;margin-bottom:16px}
+.content li{color:#374151;margin-bottom:6px}
+.content strong{color:#0d3b2e}
+.content code{background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:0.88rem}
+.content pre{background:#0d3b2e;color:#e5e7eb;padding:16px 20px;border-radius:8px;overflow-x:auto;font-size:0.82rem;margin-bottom:16px;line-height:1.5}
+.status-on{color:#059669;font-weight:600} .status-off{color:#dc2626} .status-pending{color:#d97706}
+table{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:0.88rem}
+th,td{border:1px solid #e5e7eb;padding:8px 12px;text-align:left}
+th{background:#0d3b2e;color:#fff;font-weight:600}
+td{color:#374151}
+tr:nth-child(even){background:#f3f4f6}
+footer{text-align:center;padding:32px 24px;font-size:0.85rem;color:#6b7280;border-top:1px solid #e5e7eb}
+footer a{color:#0d3b2e;text-decoration:underline}
+@media(max-width:640px){.page-header{padding:36px 0 28px}.content{padding:24px 0 48px}}
+</style>
+</head>
+<body>
+<div class="page-header"><div class="container">
+<h1>🚀 GutWise Mission Control</h1>
+<p>Automated systems powering <a href="https://gutwise.thealpha-secret.xyz">gutwise.thealpha-secret.xyz</a></p>
+</div></div>
+<div class="content"><div class="container">
+
+<h2>Active Systems</h2>
+
+<h3>📝 Daily Blog</h3>
+<ul>
+<li><strong>Schedule:</strong> 8:00 AM daily (cron)</li>
+<li><strong>Script:</strong> <code>gutwise-morning-blog.sh</code></li>
+<li><strong>Rotation:</strong> 10 gut health topics</li>
+<li><strong>Auto-publishes</strong> to GitHub Pages</li>
+<li><strong>Log:</strong> <code>memory/morning-blog.log</code></li>
+</ul>
+
+<h3>🌐 Moltbook — @alphabot_main</h3>
+<ul>
+<li><strong>Submolt:</strong> <strong>m/prophecy-watch</strong> (created May 4) — prophecies, predictions, Billy Meier, Nostradamus, Cayce</li>
+<li><strong>Promo posts:</strong> Cron at 12 PM & 6 PM via <code>gutwise-moltbook-promo.sh</code></li>
+<li><strong>Rotation:</strong> 10 educational philosophy titles (ToS compliant — no sales language)</li>
+<li><strong>Heartbeat engagement:</strong> Reply to trending philosophy posts, mention GutWise naturally</li>
+<li><strong>🚫 Rules:</strong> No spam, no commercial sales, no scraping, 2.5 min min between posts</li>
+</ul>
+
+<h3>📱 Telegram Channel (@gutwisehealth)</h3>
+<ul>
+<li><strong>Bot:</strong> <code>@gutwise_bot</code> (admin)</li>
+<li><strong>Schedule:</strong> 8:30 AM (blog link) · 12:00 PM (health fact) · 6:00 PM (site highlight)</li>
+<li><strong>Content rotation:</strong> 6 facts — serotonin, immunity, neurons, natural law, cause & effect, mood</li>
+<li><strong>Script:</strong> <code>gutwise-telegram.sh</code></li>
+</ul>
+
+<h3>⚖️ Legal Reviewer (On-Demand)</h3>
+<ul>
+<li><strong>Skill:</strong> <code>skills/legal-reviewer/</code></li>
+<li><strong>Coverage:</strong> 30+ jurisdictions worldwide (GDPR, CCPA, LGPD, PIPL, POPIA, and 20+ more)</li>
+<li><strong>Reference:</strong> <code>skills/legal-reviewer/references/global-laws.md</code></li>
+<li><strong>Subagent:</strong> Active and waiting for requests</li>
+</ul>
+
+<h3>🎨 SVG Art (On-Demand)</h3>
+<ul>
+<li><strong>Hand-coded SVGs:</strong> No APIs, no subscriptions, zero load time</li>
+<li><strong>In repo:</strong> <a href="assets/cinematic-bg-v2.svg">Cinematic forest background</a> (used in hero), <a href="svg-showcase.html">SVG Showcase</a></li>
+</ul>
+
+<h2>Daily Schedule</h2>
+
+<table>
+<thead><tr><th>Time</th><th>Task</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>7:00 AM</td><td>System update</td><td>OpenClaw daily maintenance</td></tr>
+<tr><td>8:00 AM</td><td>📝 Blog post</td><td>New SEO article → GitHub Pages</td></tr>
+<tr><td>8:30 AM</td><td>📱 Telegram</td><td>Blog link → @gutwisehealth</td></tr>
+<tr><td>12:00 PM</td><td>🌐 Moltbook</td><td>Philosophy/science promo post</td></tr>
+<tr><td>12:00 PM</td><td>📱 Telegram</td><td>Rotating gut health fact</td></tr>
+<tr><td>All day</td><td>💬 Engagement</td><td>Moltbook replies + site health</td></tr>
+<tr><td>6:00 PM</td><td>🌐 Moltbook</td><td>Second philosophy promo post</td></tr>
+<tr><td>6:00 PM</td><td>📱 Telegram</td><td>Site highlight</td></tr>
+</tbody>
+</table>
+
+<h3>Cron Summary</h3>
+<pre>0 7 * * *   openclaw daily-update
+0 8 * * *   gutwise-morning-blog.sh
+30 8 * * *  gutwise-telegram.sh
+0 12 * * *  gutwise-moltbook-promo.sh
+0 12 * * *  gutwise-telegram.sh
+0 18 * * *  gutwise-moltbook-promo.sh
+0 18 * * *  gutwise-telegram.sh</pre>
+
+<h2>X/Twitter (Pending)</h2>
+<ul>
+<li><strong>Post draft saved:</strong> Option C — "Your second brain is in your gut"</li>
+<li><strong>Reminder set:</strong> May 11, 2026 (add emojis & finalize)</li>
+<li><strong>⚠️ Account required:</strong> Different from @RandomShopNFT (permanently suspended)</li>
+</ul>
+
+<h2>Site Status</h2>
+<ul>
+<li><strong>Live:</strong> <a href="https://gutwise.thealpha-secret.xyz">gutwise.thealpha-secret.xyz</a></li>
+<li><strong>Blog:</strong> <a href="https://gutwise.thealpha-secret.xyz/blog/">gutwise.thealpha-secret.xyz/blog/</a></li>
+<li><strong>Pages:</strong> Privacy Policy, Terms of Service, 5+ articles</li>
+<li><strong>SEO:</strong> OG tags, JSON-LD, sitemap, robots.txt, canonical, nav bar</li>
+</ul>
+
+</div></div>
+<footer><div class="container">
+<p><a href="https://gutwise.thealpha-secret.xyz">GutWise</a> — Reclaim Your Vitality From Within.</p>
+<p><a href="https://gutwise.thealpha-secret.xyz/blog/">Blog</a> · <a href="https://gutwise.thealpha-secret.xyz/privacy.html">Privacy</a> · <a href="https://gutwise.thealpha-secret.xyz/tos.html">Terms</a></p>
+</div></footer>
+</body>
+</html>
