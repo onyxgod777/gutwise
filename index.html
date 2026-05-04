@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GutWise — Reclaim Your Vitality From Within</title>
     <!-- Inline SVG favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d3b2e'/%3E%3Cpath d='M32 8 Q14 18 12 34 Q10 50 24 56 L32 8Z' fill='rgba(251,191,36,0.2)' stroke='%23fbbf24' stroke-width='2'/%3E%3Cpath d='M32 8 Q50 18 52 34 Q54 50 40 56 L32 8Z' fill='rgba(251,191,36,0.1)' stroke='%23fbbf24' stroke-width='1.5'/%3E%3Cpath d='M32 12 L32 48' stroke='%23fbbf24' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='2' fill='%23fbbf24'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d3b2e' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 12 Q18 22 16 36 Q14 48 24 54 L32 12Z' fill='rgba(251,191,36,0.2)' stroke='%23fbbf24' stroke-width='1.5'/%3E%3Cpath d='M32 12 Q46 22 48 36 Q50 48 40 54 L32 12Z' fill='rgba(251,191,36,0.1)' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 14 L32 48' stroke='%23fbbf24' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%23fbbf24'/%3E%3C/svg%3E" />
     <meta name="description" content="Discover how gut health shapes your energy, mood, and clarity. Simple, science-backed wisdom for a stronger you." />
     <link rel="canonical" href="https://gutwise.thealpha-secret.xyz" />
     <!-- Open Graph -->
@@ -73,12 +73,17 @@
             margin: 0 auto 32px;
             color: rgba(255,255,255,0.85);
         }
-        .hero-logo { width: 120px; height: 120px; margin: 0 auto 20px; }
-        @media (min-width: 640px) { .hero-logo { width: 160px; height: 160px; } }
-        @media (min-width: 1024px) { .hero-logo { width: 180px; height: 180px; } }
+        .hero-logo-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+        .hero-logo { width: 160px; height: 160px; }
+        @media (min-width: 640px) { .hero-logo { width: 220px; height: 220px; } }
+        @media (min-width: 1024px) { .hero-logo { width: 260px; height: 260px; } }
         @keyframes logoPulse {
-            0%, 100% { filter: drop-shadow(0 0 15px rgba(251,191,36,0.2)) drop-shadow(0 0 30px rgba(251,191,36,0.1)); }
-            50% { filter: drop-shadow(0 0 25px rgba(251,191,36,0.35)) drop-shadow(0 0 50px rgba(251,191,36,0.15)); }
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(251,191,36,0.2)) drop-shadow(0 0 50px rgba(34,197,94,0.1)); }
+            50% { filter: drop-shadow(0 0 35px rgba(251,191,36,0.4)) drop-shadow(0 0 70px rgba(34,197,94,0.2)); }
         }
         .hero-logo { animation: logoPulse 4s ease-in-out infinite; }
         .hero-logo:hover { animation-duration: 1.5s; }
@@ -238,60 +243,58 @@
     <!-- ═══ HERO ═══ -->
     <section class="hero">
         <div class="container">
-            <!-- Logo: bold radiant leaf symbol -->
-            <svg class="hero-logo" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-label="GutWise">
+            <!-- Logo: triple-leaf emblem on forest green -->
+            <div class="hero-logo-wrap">
+            <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="GutWise">
                 <defs>
-                    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="rgba(251,191,36,0.25)" />
+                    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#1a5a3a" />
+                        <stop offset="100%" stop-color="#0d3b2e" />
+                    </radialGradient>
+                    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="rgba(251,191,36,0.12)" />
                         <stop offset="100%" stop-color="rgba(251,191,36,0)" />
                     </radialGradient>
-                    <radialGradient id="ringGrad" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="rgba(255,255,255,0)" />
-                        <stop offset="70%" stop-color="rgba(255,255,255,0)" />
-                        <stop offset="85%" stop-color="rgba(251,191,36,0.15)" />
-                        <stop offset="95%" stop-color="rgba(251,191,36,0.3)" />
-                        <stop offset="100%" stop-color="rgba(251,191,36,0)" />
-                    </radialGradient>
-                    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#fbbf24" />
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fcd34d" />
+                        <stop offset="50%" stop-color="#fbbf24" />
                         <stop offset="100%" stop-color="#f59e0b" />
                     </linearGradient>
-                    <linearGradient id="leafFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="rgba(255,255,255,0)" />
-                        <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-                    </linearGradient>
                 </defs>
-                <!-- Outer glow aura -->
-                <circle cx="70" cy="70" r="68" fill="url(#glowGrad)" />
-                <!-- Radiant ring -->
-                <circle cx="70" cy="70" r="64" fill="none" stroke="url(#ringGrad)" stroke-width="2" />
-                <!-- Inner border ring -->
-                <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-                <!-- Leaf left half -->
-                <path d="M70 16 Q32 38 28 70 Q24 100 50 110 L70 16Z" fill="rgba(255,255,255,0.06)" stroke="rgba(251,191,36,0.25)" stroke-width="1" />
-                <!-- Leaf right half -->
-                <path d="M70 16 Q108 38 112 70 Q116 100 90 110 L70 16Z" fill="rgba(255,255,255,0.04)" stroke="rgba(251,191,36,0.15)" stroke-width="1" />
-                <!-- Leaf center vein (thick, gold) -->
-                <path d="M70 20 L70 100" stroke="url(#leafGrad)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                <!-- Side veins -- left -->
-                <path d="M70 34 Q48 40 40 42" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.65" />
-                <path d="M70 48 Q46 54 36 56" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5" />
-                <path d="M70 62 Q48 68 40 70" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4" />
-                <path d="M70 76 Q52 80 48 82" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3" />
-                <!-- Side veins -- right -->
-                <path d="M70 34 Q92 40 100 42" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.65" />
-                <path d="M70 48 Q94 54 104 56" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5" />
-                <path d="M70 62 Q92 68 100 70" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4" />
-                <path d="M70 76 Q88 80 92 82" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3" />
-                <!-- Stem -->
-                <path d="M70 98 Q66 108 62 120" stroke="url(#leafGrad)" stroke-width="3" fill="none" stroke-linecap="round" />
+                <!-- Forest green circle background -->
+                <circle cx="100" cy="100" r="98" fill="url(#bgGrad)" stroke="rgba(251,191,36,0.15)" stroke-width="1.5" />
+                <!-- Inner gold glow aura -->
+                <circle cx="100" cy="100" r="85" fill="url(#innerGlow)" />
+                <!-- Thin decorative ring -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(251,191,36,0.1)" stroke-width="1" stroke-dasharray="4,6" />
+                <!-- === LEAF 1: Center large (main) === -->
+                <path d="M100 28 Q72 50 66 80 Q60 108 86 124 L100 28Z" fill="rgba(255,255,255,0.08)" stroke="url(#goldGrad)" stroke-width="1.5" />
+                <path d="M100 28 Q128 50 134 80 Q140 108 114 124 L100 28Z" fill="rgba(255,255,255,0.05)" stroke="url(#goldGrad)" stroke-width="1" />
+                <path d="M100 32 L100 114" stroke="url(#goldGrad)" stroke-width="3.5" fill="none" stroke-linecap="round" />
+                <!-- Leaf 1 side veins -->
+                <path d="M100 48 Q80 54 74 56" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5" />
+                <path d="M100 66 Q78 74 70 78" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4" />
+                <path d="M100 84 Q84 90 78 92" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3" />
+                <path d="M100 48 Q120 54 126 56" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5" />
+                <path d="M100 66 Q122 74 130 78" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4" />
+                <path d="M100 84 Q116 90 122 92" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3" />
+                <!-- Leaf 1 stem -->
+                <path d="M100 122 Q96 132 94 144" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                <!-- === LEAF 2: Left (smaller, angled) === -->
+                <path d="M60 62 Q36 82 34 104 Q32 126 52 134 L60 62Z" fill="rgba(255,255,255,0.05)" stroke="#fbbf24" stroke-width="1" opacity="0.6" />
+                <path d="M56 68 L46 124" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4" />
+                <path d="M54 84 Q44 90 42 92" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3" />
+                <path d="M52 100 Q44 104 42 106" stroke="#fbbf24" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.25" />
+                <!-- === LEAF 3: Right (smaller, angled) === -->
+                <path d="M140 62 Q164 82 166 104 Q168 126 148 134 L140 62Z" fill="rgba(255,255,255,0.05)" stroke="#fbbf24" stroke-width="1" opacity="0.6" />
+                <path d="M144 68 L154 124" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4" />
+                <path d="M146 84 Q156 90 158 92" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3" />
+                <path d="M148 100 Q156 104 158 106" stroke="#fbbf24" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.25" />
                 <!-- Gold center point -->
-                <circle cx="70" cy="70" r="4" fill="#fbbf24" opacity="0.9" />
-                <!-- Small dots accents around leaf -->
-                <circle cx="25" cy="65" r="1.5" fill="#fbbf24" opacity="0.3" />
-                <circle cx="115" cy="65" r="1.5" fill="#fbbf24" opacity="0.3" />
-                <circle cx="68" cy="126" r="1.5" fill="#fbbf24" opacity="0.2" />
+                <circle cx="100" cy="100" r="5" fill="#fbbf24" />
+                <circle cx="100" cy="100" r="7" fill="none" stroke="rgba(251,191,36,0.3)" stroke-width="1" />
             </svg>
+            </div>
             <h1>Your Gut Knows<br />What You Need.</h1>
             <p>
                 Energy, mood, clarity — it all starts in your microbiome.
