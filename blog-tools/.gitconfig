@@ -1,0 +1,5 @@
+[user]
+	email = nox@openclaw.ai
+	name = Nox 🌱
+[credential]
+	helper = store --file /data/data/com.termux/files/home/.openclaw/workspace/gutwise-blog/blog-tools/.git-credentials
