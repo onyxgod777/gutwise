@@ -7,18 +7,38 @@
     <!-- Inline SVG favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d3b2e' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 12 Q18 22 16 36 Q14 48 24 54 L32 12Z' fill='rgba(251,191,36,0.2)' stroke='%23fbbf24' stroke-width='1.5'/%3E%3Cpath d='M32 12 Q46 22 48 36 Q50 48 40 54 L32 12Z' fill='rgba(251,191,36,0.1)' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 14 L32 48' stroke='%23fbbf24' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%23fbbf24'/%3E%3C/svg%3E" />
     <meta name="description" content="Discover how gut health shapes your energy, mood, and clarity. Simple, science-backed wisdom for a stronger you." />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://gutwise.thealpha-secret.xyz" />
     <!-- Open Graph -->
     <meta property="og:title" content="GutWise — Reclaim Your Vitality From Within" />
     <meta property="og:description" content="Your gut produces 90% of your serotonin. Discover the science-backed path to better energy, mood, and clarity through natural gut health." />
     <meta property="og:url" content="https://gutwise.thealpha-secret.xyz" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gutwise.thealpha-secret.xyz/assets/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GutWise — Reclaim Your Vitality From Within" />
     <meta name="twitter:description" content="Your gut produces 90% of your serotonin. Discover the science-backed path to better energy, mood, and clarity." />
+    <meta name="twitter:image" content="https://gutwise.thealpha-secret.xyz/assets/og-image.svg" />
     <!-- Favicon (inline SVG) -->
     <link rel="icon" type="image/svg+xml" href="#favicon-svg" />
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "GutWise",
+      "url": "https://gutwise.thealpha-secret.xyz",
+      "description": "Discover how gut health shapes your energy, mood, and clarity. Simple, science-backed wisdom for a stronger you.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://gutwise.thealpha-secret.xyz/blog/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <style>
         /* ── Reset & Base ── */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -322,7 +342,7 @@
     <nav>
         <div class="nav-inner">
             <a href="https://gutwise.thealpha-secret.xyz" class="nav-logo">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GutWise">
                     <circle cx="32" cy="32" r="30" fill="#0d3b2e" stroke="#fbbf24" stroke-width="1"/>
                     <path d="M32 12 Q18 22 16 36 Q14 48 24 54 L32 12Z" fill="rgba(251,191,36,0.2)" stroke="#fbbf24" stroke-width="1.5"/>
                     <path d="M32 12 Q46 22 48 36 Q50 48 40 54 L32 12Z" fill="rgba(251,191,36,0.1)" stroke="#fbbf24" stroke-width="1"/>
@@ -342,25 +362,15 @@
 
     <div class="nav-spacer"></div>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "GutWise",
-      "url": "https://gutwise.thealpha-secret.xyz",
-      "description": "Discover how gut health shapes your energy, mood, and clarity. Simple, science-backed wisdom for a stronger you."
-    }
-    </script>
-
     <!-- ═══ HERO ═══ -->
-    <section class="hero">
+    <section class="hero" aria-label="GutWise hero section promoting gut health">
         <!-- Cinematic SVG background -->
-        <img class="hero-bg" src="assets/cinematic-bg-v2.svg" alt="" aria-hidden="true" />
+        <img class="hero-bg" src="assets/cinematic-bg-v2.svg" alt="Decorative forest background with light rays" aria-hidden="true" />
         <div class="hero-overlay"></div>
         <div class="container">
             <!-- Logo: triple-leaf emblem on forest green -->
             <div class="hero-logo-wrap">
-            <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="GutWise">
+            <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GutWise emblem - a leaf symbolizing natural gut health">
                 <defs>
                     <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stop-color="#1a5a3a" />
@@ -410,7 +420,7 @@
                 <circle cx="100" cy="100" r="7" fill="none" stroke="rgba(251,191,36,0.3)" stroke-width="1" />
             </svg>
             </div>
-            <h1>Your Gut Knows<br />What You Need.</h1>
+            <h1>Your Gut Health: The Key to<br />Energy, Mood &amp; Clarity</h1>
             <p>
                 Energy, mood, clarity — it all starts in your microbiome.
                 Discover the natural path to a stronger, more vibrant you.

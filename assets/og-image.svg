@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d3b2e"/>
+      <stop offset="100%" stop-color="#1a5a3a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Emblem circle -->
+  <circle cx="280" cy="315" r="130" fill="#0d3b2e" stroke="rgba(251,191,36,0.3)" stroke-width="3"/>
+  <circle cx="280" cy="315" r="115" fill="rgba(251,191,36,0.05)"/>
+  <!-- Leaf emblems (simplified) -->
+  <path d="M280 215 Q248 240 240 275 Q232 308 262 328 L280 215Z" fill="rgba(255,255,255,0.08)" stroke="url(#gold)" stroke-width="2"/>
+  <path d="M280 215 Q312 240 320 275 Q328 308 298 328 L280 215Z" fill="rgba(255,255,255,0.05)" stroke="url(#gold)" stroke-width="1.5"/>
+  <path d="M280 220 L280 380" stroke="url(#gold)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Leaf side veins -->
+  <path d="M280 240 Q256 248 248 252" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <path d="M280 260 Q256 268 248 272" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M280 240 Q304 248 312 252" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <path d="M280 260 Q304 268 312 272" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <circle cx="280" cy="315" r="6" fill="#fbbf24"/>
+  <!-- Text -->
+  <text x="440" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="#fff" letter-spacing="-1">GutWise</text>
+  <text x="440" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="rgba(255,255,255,0.85)" letter-spacing="0">Reclaim Your Vitality</text>
+  <text x="440" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.6)" letter-spacing="0">Gut Health • Gut-Brain Axis • Natural Wellness</text>
+  <!-- Decorative line -->
+  <line x1="440" y1="410" x2="780" y2="410" stroke="rgba(251,191,36,0.4)" stroke-width="2"/>
+  <text x="440" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" fill="rgba(255,255,255,0.5)">gutwise.thealpha-secret.xyz</text>
+</svg>
