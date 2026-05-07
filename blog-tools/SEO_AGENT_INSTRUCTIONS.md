@@ -50,6 +50,21 @@ git commit -m "📝 Blog: <article-title-slug> (May X)"
 git push origin main
 ```
 
+### Step 5: Notify via Telegram
+Send a summary of the new post to the GutWise Telegram channel @gutwisehealth.
+
+```bash
+TOKEN=$(cat ~/.gutwise/telegram-token)
+curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendPhoto" \
+  -F "chat_id=@gutwisehealth" \
+  -F "photo=https://gutwise.thealpha-secret.xyz/assets/og-image.png" \
+  -F "parse_mode=HTML" \
+  -F "caption=<b>📝 New Blog Post</b>
+<Article Title>
+
+<a href='https://gutwise.thealpha-secret.xyz/blog/<filename>.html'>Read the full article →</a>"
+```
+
 ## Article Quality Standards
 
 ### SEO Requirements

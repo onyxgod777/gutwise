@@ -335,6 +335,23 @@
             section { padding: 48px 0; }
             .hero { padding: 56px 0 48px; }
         }
+
+        /* ── Scroll Reveal Animations ── */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal {
+                opacity: 0;
+                transform: translateY(24px);
+                transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                will-change: transform, opacity;
+            }
+            .reveal.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
     </style>
 </head>
 <body>
@@ -492,15 +509,15 @@
             <span class="section-label">The Science</span>
             <h2>Why Gut Health Changes Everything</h2>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:32px;">
-                <div>
+                <div class="stat-item">
                     <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">90%</h3>
                     <p style="color:#4b5563;font-size:0.9rem;">of your body's serotonin is produced in your gut, not your brain.</p>
                 </div>
-                <div>
+                <div class="stat-item">
                     <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">70%</h3>
                     <p style="color:#4b5563;font-size:0.9rem;">of your immune system lives in your digestive tract.</p>
                 </div>
-                <div>
+                <div class="stat-item">
                     <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">100M</h3>
                     <p style="color:#4b5563;font-size:0.9rem;">neurons line your gut — more than in your spinal cord.</p>
                 </div>
@@ -614,6 +631,32 @@
             </p>
         </div>
     </footer>
+
+    <!-- ═══ SCROLL REVEAL ═══ -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        'use strict';
+        var targets = document.querySelectorAll(
+            '.wisdom-card, .product-card, .step, .stat-item'
+        );
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            targets.forEach(function(el) {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+        } else {
+            targets.forEach(function(el) { el.style.opacity = '1'; });
+        }
+    });
+    </script>
 
 </body>
 </html>
