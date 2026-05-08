@@ -213,6 +213,50 @@
         section { padding: 72px 0; }
         section:nth-child(even) { background: #fff; }
 
+        /* ── Stats Cards ── */
+        .stat-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 24px 28px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(13,59,46,0.06);
+            border: 1px solid rgba(45,106,79,0.08);
+            transition: box-shadow .3s, transform .3s;
+        }
+        .stat-card:hover {
+            box-shadow: 0 8px 28px rgba(13,59,46,0.1);
+            transform: translateY(-3px);
+        }
+        .stat-value-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        .stat-value {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #0d3b2e;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        .stat-accent {
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #fbbf24, #fcd34d);
+            border-radius: 2px;
+            margin: 8px auto 12px;
+        }
+        .stat-card p {
+            color: #4b5563;
+            font-size: 0.9rem;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+        @media (max-width: 640px) {
+            .stat-card { padding: 24px 16px 20px; }
+        }
+
         /* ── Philosophy / Wisdom ── */
         .philosophy-grid {
             display: grid;
@@ -509,17 +553,26 @@
             <span class="section-label">The Science</span>
             <h2>Why Gut Health Changes Everything</h2>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:32px;">
-                <div class="stat-item">
-                    <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">90%</h3>
-                    <p style="color:#4b5563;font-size:0.9rem;">of your body's serotonin is produced in your gut, not your brain.</p>
+                <div class="stat-card reveal">
+                    <div class="stat-value-wrap">
+                        <span class="stat-value" data-target="90" data-suffix="%">0</span>
+                        <span class="stat-accent"></span>
+                    </div>
+                    <p>of your body's serotonin is produced in your gut, not your brain.</p>
                 </div>
-                <div class="stat-item">
-                    <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">70%</h3>
-                    <p style="color:#4b5563;font-size:0.9rem;">of your immune system lives in your digestive tract.</p>
+                <div class="stat-card reveal">
+                    <div class="stat-value-wrap">
+                        <span class="stat-value" data-target="70" data-suffix="%">0</span>
+                        <span class="stat-accent"></span>
+                    </div>
+                    <p>of your immune system lives in your digestive tract.</p>
                 </div>
-                <div class="stat-item">
-                    <h3 style="font-size:2.5rem;color:#0d3b2e;margin-bottom:0;">100M</h3>
-                    <p style="color:#4b5563;font-size:0.9rem;">neurons line your gut — more than in your spinal cord.</p>
+                <div class="stat-card reveal">
+                    <div class="stat-value-wrap">
+                        <span class="stat-value" data-target="100" data-suffix="M">0</span>
+                        <span class="stat-accent"></span>
+                    </div>
+                    <p>neurons line your gut — more than in your spinal cord.</p>
                 </div>
             </div>
             <p style="margin-top:24px;font-size:0.95rem;color:#4b5563;max-width:600px;">
@@ -636,8 +689,10 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         'use strict';
+
+        // ── Scroll Reveal ──
         var targets = document.querySelectorAll(
-            '.wisdom-card, .product-card, .step, .stat-item'
+            '.wisdom-card, .product-card, .step, .stat-card'
         );
         if ('IntersectionObserver' in window) {
             var observer = new IntersectionObserver(function(entries) {
@@ -654,6 +709,44 @@
             });
         } else {
             targets.forEach(function(el) { el.style.opacity = '1'; });
+        }
+
+        // ── Count-up Animation for Stats ──
+        var statValues = document.querySelectorAll('.stat-value');
+        if ('IntersectionObserver' in window && statValues.length) {
+            var countObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        animateCount(entry.target);
+                        countObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statValues.forEach(function(el) { countObserver.observe(el); });
+        }
+
+        function animateCount(el) {
+            var target = parseInt(el.getAttribute('data-target'), 10);
+            var suffix = el.getAttribute('data-suffix') || '';
+            var duration = 1200;
+            var startTime = null;
+
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = Math.min((timestamp - startTime) / duration, 1);
+                // Ease-out cubic for a decelerating feel
+                var eased = 1 - Math.pow(1 - progress, 3);
+                var current = Math.round(eased * target);
+                el.textContent = current + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    el.textContent = target + suffix;
+                }
+            }
+
+            requestAnimationFrame(step);
         }
     });
     </script>
