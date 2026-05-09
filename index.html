@@ -297,25 +297,79 @@
             background: #faf9f6;
             border: 1px solid #e5e7eb;
             border-radius: 16px;
-            padding: 28px 24px;
-            transition: border-color .2s, box-shadow .2s;
+            padding: 24px 24px 28px;
+            transition: border-color .2s, box-shadow .2s, transform .2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
         }
         .product-card:hover {
             border-color: #2d6a4f;
-            box-shadow: 0 8px 24px rgba(45,106,79,0.1);
+            box-shadow: 0 12px 32px rgba(45,106,79,0.12);
+            transform: translateY(-3px);
+        }
+        /* Featured #1 Pick — gold left accent */
+        .product-card.featured {
+            border-color: rgba(251,191,36,0.3);
+            background: linear-gradient(135deg, #fefcf6 0%, #faf9f6 100%);
+            box-shadow: 0 4px 20px rgba(251,191,36,0.08);
+        }
+        .product-card.featured::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #fbbf24, #f59e0b);
+            border-radius: 16px 0 0 16px;
+        }
+        .product-card.featured:hover {
+            border-color: rgba(251,191,36,0.5);
+            box-shadow: 0 12px 36px rgba(251,191,36,0.15);
+        }
+        /* Product icon — small emoji in a subtle circle */
+        .product-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+            transition: transform .2s;
+        }
+        .product-card:hover .product-icon { transform: scale(1.1); }
+        .product-card.featured .product-icon {
+            background: rgba(251,191,36,0.12);
         }
         .product-card .rating {
             display: inline-block;
             background: #fef3c7;
             color: #92400e;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
             padding: 4px 12px;
             border-radius: 20px;
             margin-bottom: 12px;
+            letter-spacing: 0.02em;
+        }
+        .product-card.featured .rating {
+            background: linear-gradient(135deg, #fbbf24, #fcd34d);
+            color: #7c2d12;
         }
         .product-card h3 { font-size: 1.1rem; }
-        .product-card p { font-size: 0.9rem; color: #4b5563; margin-bottom: 16px; }
+        .product-card p { font-size: 0.9rem; color: #4b5563; margin-bottom: auto; padding-bottom: 16px; }
+        /* Accent separator above CTA */
+        .product-cta-wrap {
+            margin-top: 8px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(229,231,235,0.6);
+        }
+        .product-card.featured .product-cta-wrap {
+            border-top-color: rgba(251,191,36,0.2);
+        }
         .product-link {
             display: inline-block;
             background: #0d3b2e;
@@ -324,9 +378,21 @@
             font-size: 0.9rem;
             padding: 10px 24px;
             border-radius: 30px;
-            transition: background .2s;
+            transition: background .2s, box-shadow .2s;
         }
-        .product-link:hover { background: #1a5a3a; }
+        .product-link:hover {
+            background: #1a5a3a;
+            box-shadow: 0 4px 12px rgba(13,59,46,0.2);
+        }
+        .product-card.featured .product-link {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #0d3b2e;
+            font-weight: 700;
+        }
+        .product-card.featured .product-link:hover {
+            background: linear-gradient(135deg, #fcd34d, #fbbf24);
+            box-shadow: 0 4px 16px rgba(251,191,36,0.35);
+        }
 
         /* ── How It Works ── */
         .steps {
@@ -631,39 +697,54 @@
             </p>
             <div class="product-grid">
 
-                <div class="product-card">
+                <div class="product-card featured">
+                    <div class="product-icon">🍵</div>
                     <span class="rating">⭐ #1 Pick</span>
                     <h3>Cardio Slim Tea</h3>
                     <p>Natural tea blend with green tea, ginger, hibiscus, oolong &amp; dandelion. Supports heart health, digestion, and natural energy.</p>
-                    <a href="https://6f9ed1yk93wai4cxqdm9sqmdsb.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    <div class="product-cta-wrap">
+                        <a href="https://6f9ed1yk93wai4cxqdm9sqmdsb.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    </div>
                 </div>
 
                 <div class="product-card">
+                    <div class="product-icon">⚡</div>
                     <span class="rating">🔥 Metabolism Support</span>
                     <h3>Superconductor Slim</h3>
                     <p>Unique plant-based formula with Egyptian Blue Vervain, Eleuthero Root &amp; Peppermint Oil. Supports healthy metabolism and weight management naturally.</p>
-                    <a href="https://9fe186ykah15j-ihw0zcsomdza.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    <div class="product-cta-wrap">
+                        <a href="https://9fe186ykah15j-ihw0zcsomdza.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    </div>
                 </div>
 
                 <div class="product-card">
+                    <div class="product-icon">🦠</div>
                     <span class="rating">🌿 Gut Health Pick</span>
                     <h3>LeanBiome</h3>
                     <p>Ivy League-researched probiotic formula. Supports healthy gut flora, metabolism, and lasting weight management — naturally.</p>
-                    <a href="https://8ecc92wj05x9j4ddqwvykfx67v.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    <div class="product-cta-wrap">
+                        <a href="https://8ecc92wj05x9j4ddqwvykfx67v.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    </div>
                 </div>
 
                 <div class="product-card">
+                    <div class="product-icon">🧠</div>
                     <span class="rating">🧠 Brain-Gut Axis</span>
                     <h3>NeuroPrime</h3>
                     <p>Clinically researched cognitive support targeting sleep, memory, and neural health — because a healthy gut fuels a sharp mind.</p>
-                    <a href="https://678c281lzcwaa1cfrh5htetij9.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    <div class="product-cta-wrap">
+                        <a href="https://678c281lzcwaa1cfrh5htetij9.hop.clickbank.net" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    </div>
                 </div>
 
                 <div class="product-card">
+                    <div class="product-icon">🧬</div>
                     <span class="rating">🧬 Gut Health Powerhouse</span>
                     <h3>VivoGut</h3>
                     <p>14 premium nutrients, herbs &amp; minerals backed by research. Targets digestion, nutrient absorption, and gut lining repair — all in one formula.</p>
-                    <a href="https://getvivogutpro.com?&amp;shield=526bb9wk2a75m3ljol128e9r2s" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    <div class="product-cta-wrap">
+                        <a href="https://getvivogutpro.com?&amp;shield=526bb9wk2a75m3ljol128e9r2s" class="product-link" target="_blank" rel="noopener">Learn More →</a>
+                    </div>
                 </div>
 
             </div>
