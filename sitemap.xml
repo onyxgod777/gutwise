@@ -66,6 +66,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gutwise.thealpha-secret.xyz/blog/leaky-gut-syndrome-science-intestinal-permeability.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gutwise.thealpha-secret.xyz/svg-showcase.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
