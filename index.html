@@ -182,8 +182,29 @@
             border-radius: 40px;
             transition: transform .2s, box-shadow .2s;
             box-shadow: 0 4px 14px rgba(251,191,36,0.35);
+            position: relative;
+            isolation: isolate;
         }
-        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(251,191,36,0.45); }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(251,191,36,0.55);
+        }
+        /* Subtle glow pulse on CTA */
+        @media (prefers-reduced-motion: no-preference) {
+            @keyframes ctaGlow {
+                0%, 100% { box-shadow: 0 4px 14px rgba(251,191,36,0.35); }
+                50% { box-shadow: 0 4px 28px rgba(251,191,36,0.55), 0 0 60px rgba(251,191,36,0.08); }
+            }
+            .hero-cta {
+                animation: ctaGlow 3s ease-in-out infinite;
+            }
+            .hero-cta:hover {
+                animation-duration: 0.8s;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-cta { animation: none; }
+        }
         .hero-sub {
             display: inline-block;
             margin-top: 16px;
