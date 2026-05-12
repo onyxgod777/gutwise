@@ -122,6 +122,95 @@
             nav .nav-links a:not(.nav-cta) { display: none; }
         }
 
+        /* ── Hamburger Menu ── */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            padding: 4px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 110;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 2px;
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease;
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        /* Mobile slide-down menu */
+        .mobile-menu {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(10,26,15,0.98), rgba(10,26,15,0.94));
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(251,191,36,0.1);
+            padding: 16px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 99;
+        }
+        .mobile-menu.open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-menu a {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.05rem;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            transition: color .2s;
+        }
+        .mobile-menu a:last-of-type { border-bottom: none; }
+        .mobile-menu a:hover { color: #fbbf24; }
+        .mobile-menu .mobile-cta {
+            display: inline-block;
+            background: #fbbf24;
+            color: #0d3b2e !important;
+            text-align: center;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 4px;
+            border-bottom: none;
+            transition: background .2s;
+        }
+        .mobile-menu .mobile-cta:hover { background: #fcd34d; }
+        @media (max-width: 640px) {
+            .hamburger { display: flex; }
+            nav .nav-links { display: none; }
+            /* Show the nav CTA only as the last mobile menu item */
+            nav .nav-links a.nav-cta { display: none; }
+        }
+        @media (min-width: 641px) {
+            .mobile-menu { display: none !important; }
+        }
+
         /* ── Typography ── */
         h1, h2, h3 { font-weight: 700; line-height: 1.2; }
         h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
@@ -558,8 +647,20 @@
                 <a href="blog/">Blog</a>
                 <a href="#products" class="nav-cta">Shop Now →</a>
             </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+    <!-- Mobile slide-down menu -->
+    <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <a href="#philosophy">Philosophy</a>
+        <a href="#products">Products</a>
+        <a href="blog/">Blog</a>
+        <a href="#products" class="mobile-cta">Shop Now →</a>
+    </div>
 
     <div class="nav-spacer"></div>
 
@@ -843,6 +944,35 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         'use strict';
+
+        // ── Hamburger Menu Toggle ──
+        var hamburger = document.querySelector('.hamburger');
+        var mobileMenu = document.querySelector('.mobile-menu');
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                var isOpen = mobileMenu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+            // Close menu on outside click (tap backdrop)
+            document.addEventListener('click', function(e) {
+                if (mobileMenu.classList.contains('open') &&
+                    !mobileMenu.contains(e.target) &&
+                    !hamburger.contains(e.target)) {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
 
         // ── Scroll Reveal ──
         var targets = document.querySelectorAll(
