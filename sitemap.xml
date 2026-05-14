@@ -96,6 +96,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gutwise.thealpha-secret.xyz/blog/how-sugar-damages-gut-microbiome.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
     <loc>https://gutwise.thealpha-secret.xyz/blog/gut-brain-axis-second-brain-mood-sleep.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
