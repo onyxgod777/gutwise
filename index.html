@@ -525,29 +525,61 @@
         /* ── How It Works ── */
         .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            margin-top: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+            position: relative;
+        }
+        /* Decorative connecting line between step numbers */
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 44px;
+            left: 18%;
+            right: 18%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(251,191,36,0.2) 20%, rgba(251,191,36,0.2) 80%, transparent);
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            .steps::before { display: none; }
         }
         .step {
             text-align: center;
-            padding: 24px 16px;
+            padding: 32px 20px 28px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid rgba(45,106,79,0.08);
+            box-shadow: 0 2px 8px rgba(13,59,46,0.04);
+            transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow .3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(13,59,46,0.08);
         }
         .step .num {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
-            margin: 0 auto 16px;
-            background: #0d3b2e;
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.2rem;
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 18px;
+            background: linear-gradient(135deg, #0d3b2e, #1a5a3a);
+            color: #fbbf24;
+            font-weight: 800;
+            font-size: 1.3rem;
             border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(13,59,46,0.15);
+            transition: transform .3s ease, box-shadow .3s ease;
         }
-        .step h3 { font-size: 1rem; }
-        .step p { font-size: 0.9rem; color: #4b5563; }
+        .step:hover .num {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(13,59,46,0.2);
+        }
+        .step h3 { font-size: 1.05rem; color: #0d3b2e; }
+        .step p { font-size: 0.9rem; color: #4b5563; max-width: 260px; margin: 0 auto; }
 
         /* ── CTA Banner ── */
         .cta-banner {
@@ -696,6 +728,9 @@
             .reveal.visible {
                 opacity: 1;
                 transform: translateY(0);
+            }
+            .step.reveal {
+                transition-delay: calc(var(--step-order, 0) * 0.12s);
             }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -972,17 +1007,17 @@
             <span class="section-label">Simple Steps</span>
             <h2>How It Works</h2>
             <div class="steps">
-                <div class="step">
+                <div class="step" style="--step-order: 0">
                     <div class="num">1</div>
                     <h3>Choose Your Product</h3>
                     <p>Browse our curated picks — all backed by real user results.</p>
                 </div>
-                <div class="step">
+                <div class="step" style="--step-order: 1">
                     <div class="num">2</div>
                     <h3>Click &amp; Order</h3>
                     <p>You're redirected to the official product page. Safe, secure, no middleman.</p>
                 </div>
-                <div class="step">
+                <div class="step" style="--step-order: 2">
                     <div class="num">3</div>
                     <h3>Start Your Journey</h3>
                     <p>Commit to 30 days of consistency. Listen to your body. Feel the change.</p>
