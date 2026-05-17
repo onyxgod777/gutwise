@@ -1,21 +1,21 @@
 {
   "site": "gutwise",
-  "updated": "2026-05-17T15:55:00.000Z",
+  "updated": "2026-05-17T16:18:00.000Z",
   "videos": [
     {
       "id": "gutwise-001",
       "url": "assets/video/gutwise-heal-digestion.mp4",
       "hook": "Heal your digestion naturally",
-      "prompt": "Kombucha SCOBY macro",
-      "generated": "2026-05-17T15:28:00.000Z",
+      "prompt": "Sparkling water with lemon and mint pour",
+      "generated": "2026-05-17T16:14:00.000Z",
       "posted": false
     },
     {
       "id": "gutwise-002",
       "url": "assets/video/gutwise-gut-telling.mp4",
       "hook": "Your gut is trying to tell you something",
-      "prompt": "Basil chopping ASMR",
-      "generated": "2026-05-17T15:29:00.000Z",
+      "prompt": "Fresh vegetables and tomato slicing",
+      "generated": "2026-05-17T16:15:00.000Z",
       "posted": false
     }
   ]
