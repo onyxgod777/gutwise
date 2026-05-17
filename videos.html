@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GutWise Reels — ASMR Gut Health Videos</title>
+    <meta name="description" content="Browse our collection of ASMR-style gut health videos. Satisfying visuals to calm your nervous system and inspire better health habits." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gutwise.thealpha-secret.xyz/videos.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #0a1a0f;
+            color: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── Nav ── */
+        nav {
+            background: rgba(10,26,15,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(251,191,36,0.12);
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .nav-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+        nav a {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color .2s;
+        }
+        nav a:hover { color: #fbbf24; }
+        nav .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        nav .nav-brand {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        /* ── Header ── */
+        .page-header {
+            text-align: center;
+            padding: 48px 24px 32px;
+        }
+        .page-header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 8px;
+        }
+        .page-header p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ── Video Grid ── */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+            padding: 0 24px 48px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .video-card {
+            background: rgba(255,255,255,0.04);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            aspect-ratio: 9/16;
+            max-width: 260px;
+            margin: 0 auto;
+            width: 100%;
+            cursor: pointer;
+        }
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+            border-color: rgba(251,191,36,0.3);
+        }
+        .video-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .video-card .play-hint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .video-card.playing .play-hint { opacity: 0; }
+        .play-hint svg { width: 20px; height: 20px; fill: #fff; }
+        .video-card .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 14px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            text-align: left;
+        }
+        .video-card .overlay .hook {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #fbbf24;
+            display: block;
+        }
+        .video-card .overlay .date {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 4px;
+            display: block;
+        }
+        .video-card .overlay .status-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            color: #4ade80;
+            background: rgba(74,222,128,0.1);
+            border: 1px solid rgba(74,222,128,0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 4px;
+        }
+        .video-card .overlay .status-badge.pending {
+            color: #fbbf24;
+            border-color: rgba(251,191,36,0.2);
+            background: rgba(251,191,36,0.08);
+        }
+
+        /* ── Empty ── */
+        .empty-state {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 60px 24px;
+            color: rgba(255,255,255,0.4);
+        }
+        .empty-state .big { font-size: 3rem; margin-bottom: 12px; }
+        .empty-state p { font-size: 0.95rem; }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: rgba(255,255,255,0.4);
+            font-size: 0.82rem;
+        }
+        footer a { color: #fbbf24; text-decoration: none; }
+
+        @media (max-width: 640px) {
+            .video-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .video-card { max-width: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ═══ NAV ═══ -->
+    <nav>
+        <div class="nav-inner">
+            <a href="https://gutwise.thealpha-secret.xyz" class="nav-back">← Back to GutWise</a>
+            <a href="https://gutwise.thealpha-secret.xyz" class="nav-brand">GutWise</a>
+        </div>
+    </nav>
+
+    <!-- ═══ HEADER ═══ -->
+    <div class="page-header">
+        <h1>🎬 GutWise Reels</h1>
+        <p>Short, satisfying ASMR videos to calm your nervous system and inspire better gut health habits.</p>
+    </div>
+
+    <!-- ═══ VIDEO GRID ═══ -->
+    <div class="video-grid" id="videoGrid">
+        <div class="empty-state">
+            <div class="big">⏳</div>
+            <p>Loading videos...</p>
+        </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <p><a href="https://gutwise.thealpha-secret.xyz">GutWise</a> — Reclaim Your Vitality From Within</p>
+    </footer>
+
+    <script>
+    fetch('videos.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var grid = document.getElementById('videoGrid');
+        if (!grid || !data.videos || !data.videos.length) {
+          grid.innerHTML = '<div class="empty-state"><div class="big">🌱</div><p>No reels yet. Check back after the next daily generation!</p></div>';
+          return;
+        }
+        var html = data.videos.map(function(v, i) {
+          var posted = v.posted ? '' : 'pending';
+          var date = v.generated ? new Date(v.generated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+          var badge = v.posted ? '<span class="status-badge">✅ Posted</span>' : '<span class="status-badge pending">📌 Ready to post</span>';
+          return '<div class="video-card" data-index="' + i + '">' +
+            '<video src="' + v.url + '" muted loop playsinline preload="metadata"></video>' +
+            '<div class="play-hint"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>' +
+            '<div class="overlay">' +
+              '<span class="hook">' + v.hook + '</span>' +
+              '<span class="date">' + date + '</span>' +
+              badge +
+            '</div>' +
+          '</div>';
+        }).join('');
+        grid.innerHTML = html;
+
+        // Click to play/pause
+        var cards = grid.querySelectorAll('.video-card');
+        cards.forEach(function(card) {
+          var video = card.querySelector('video');
+          card.addEventListener('click', function() {
+            if (video.paused) {
+              // Pause all others
+              cards.forEach(function(c) {
+                var v = c.querySelector('video');
+                if (v !== video) { v.pause(); c.classList.remove('playing'); }
+              });
+              video.play();
+              card.classList.add('playing');
+            } else {
+              video.pause();
+              card.classList.remove('playing');
+            }
+          });
+          // Reset on ended
+          video.addEventListener('ended', function() {
+            card.classList.remove('playing');
+          });
+        });
+      })
+      .catch(function() {
+        var grid = document.getElementById('videoGrid');
+        if (grid) grid.innerHTML = '<div class="empty-state"><div class="big">⚠️</div><p>Could not load videos. Try again later.</p></div>';
+      });
+    </script>
+</body>
+</html>
