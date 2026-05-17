@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'none'; form-action 'none';" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; media-src 'self';" / />
     <title>GutWise — Reclaim Your Vitality From Within</title>
     <!-- Inline SVG favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d3b2e' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 12 Q18 22 16 36 Q14 48 24 54 L32 12Z' fill='rgba(251,191,36,0.2)' stroke='%23fbbf24' stroke-width='1.5'/%3E%3Cpath d='M32 12 Q46 22 48 36 Q50 48 40 54 L32 12Z' fill='rgba(251,191,36,0.1)' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 14 L32 48' stroke='%23fbbf24' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%23fbbf24'/%3E%3C/svg%3E" />
@@ -342,6 +342,99 @@
             50% { transform: translateX(-50%) translateY(8px); opacity: 0.8; }
         }
         .scroll-indicator svg { width: 24px; height: 24px; }
+
+        /* ── Video Reel Section ── */
+        .video-reel {
+            background: linear-gradient(180deg, #0d3b2e 0%, #0a261a 100%);
+            color: #fff;
+            padding: 64px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .video-reel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(251,191,36,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .video-reel .section-label {
+            color: rgba(251,191,36,0.7);
+        }
+        .video-reel h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .video-reel .subtitle {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+        .reel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .reel-card {
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            aspect-ratio: 9/16;
+            max-width: 260px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .reel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+            border-color: rgba(251,191,36,0.3);
+        }
+        .reel-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .reel-card .reel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            text-align: left;
+        }
+        .reel-card .reel-overlay span {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #fbbf24;
+            display: block;
+        }
+        .reel-cta {
+            display: inline-block;
+            margin-top: 28px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.88rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-bottom: 2px;
+            transition: color .2s, border-color .2s;
+        }
+        .reel-cta:hover { color: #fbbf24; border-color: #fbbf24; }
+        @media (max-width: 640px) {
+            .reel-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .reel-card { max-width: none; }
+        }
 
         /* ── Sections ── */
         section { padding: 72px 0; }
@@ -816,6 +909,7 @@
         <a href="#philosophy">Philosophy</a>
         <a href="#products">Products</a>
         <a href="blog/">Blog</a>
+        <a href="#reels">Reels</a>
         <a href="#products" class="mobile-cta">Shop Now →</a>
     </div>
 
@@ -895,6 +989,42 @@
             </svg>
         </div>
     </section>
+
+    <!-- ═══ ASMR REELS ═══ -->
+    <section class="video-reel" id="reels" aria-label="ASMR gut health video reels">
+        <div class="container">
+            <span class="section-label">🎬 Reels</span>
+            <h2>Watch &amp; Heal</h2>
+            <p class="subtitle">Short, satisfying ASMR videos to calm your nervous system and inspire better gut health habits.</p>
+            <div class="reel-grid" id="reelGrid">
+                <p style="color:rgba(255,255,255,0.4);grid-column:1/-1;font-size:0.9rem;">Loading videos...</p>
+            </div>
+            <a href="videos.html" class="reel-cta">View all reels →</a>
+        </div>
+    </section>
+
+    <script>
+    // Load video manifest
+    fetch('videos.json')
+      .then(r => r.json())
+      .then(data => {
+        var grid = document.getElementById('reelGrid');
+        if (!grid || !data.videos) return;
+        var gutwise = data.videos.filter(v => v.site === 'gutwise');
+        var html = gutwise.slice(0, 4).map(v => 
+          '<div class="reel-card">' +
+            '<video src="' + v.url + '" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>' +
+            '<div class="reel-overlay"><span>' + v.hook + '</span></div>' +
+          '</div>'
+        ).join('');
+        if (!html) html = '<p style="color:rgba(255,255,255,0.4);grid-column:1/-1;font-size:0.9rem;">New reels coming soon. Check back tomorrow!</p>';
+        grid.innerHTML = html;
+      })
+      .catch(() => {
+        var grid = document.getElementById('reelGrid');
+        if (grid) grid.innerHTML = '<p style="color:rgba(255,255,255,0.4);grid-column:1/-1;font-size:0.9rem;">Reels loading...</p>';
+      });
+    </script>
 
     <!-- ═══ PHILOSOPHY ═══ -->
     <section id="philosophy">

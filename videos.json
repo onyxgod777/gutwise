@@ -1,0 +1,22 @@
+{
+  "site": "gutwise",
+  "updated": "2026-05-17T15:30:00.000Z",
+  "videos": [
+    {
+      "id": "gutwise-001",
+      "url": "https://tmpfiles.org/dl/wew9e3xeFpTw/gutwise-asmr-1779031897374-0-final.mp4",
+      "hook": "Heal your digestion naturally",
+      "prompt": "Kombucha SCOBY macro",
+      "generated": "2026-05-17T15:28:00.000Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-002",
+      "url": "https://tmpfiles.org/dl/w8wXefx8FxbS/gutwise-asmr-1779031905832-1-final.mp4",
+      "hook": "Your gut is trying to tell you something",
+      "prompt": "Basil chopping ASMR",
+      "generated": "2026-05-17T15:29:00.000Z",
+      "posted": false
+    }
+  ]
+}
