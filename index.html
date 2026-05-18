@@ -261,6 +261,67 @@
             will-change: transform;
             transition: transform 0.1s linear;
         }
+        /* ── Ambient Gradient Orbs ── */
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-orbs {
+                position: absolute;
+                inset: 0;
+                overflow: hidden;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .hero-orbs .orb {
+                position: absolute;
+                border-radius: 50%;
+                filter: blur(60px);
+                will-change: transform;
+                opacity: 0.35;
+            }
+            .hero-orbs .orb-1 {
+                width: 400px;
+                height: 400px;
+                background: radial-gradient(circle, rgba(34,197,94,0.25), rgba(34,197,94,0));
+                top: -10%;
+                left: -5%;
+                animation: orbFloat1 14s ease-in-out infinite;
+            }
+            .hero-orbs .orb-2 {
+                width: 350px;
+                height: 350px;
+                background: radial-gradient(circle, rgba(251,191,36,0.18), rgba(251,191,36,0));
+                bottom: -5%;
+                right: -5%;
+                animation: orbFloat2 18s ease-in-out infinite;
+            }
+            .hero-orbs .orb-3 {
+                width: 250px;
+                height: 250px;
+                background: radial-gradient(circle, rgba(34,197,94,0.15), rgba(34,197,94,0));
+                top: 50%;
+                left: 60%;
+                animation: orbFloat3 16s ease-in-out infinite;
+            }
+            @keyframes orbFloat1 {
+                0%, 100% { transform: translate(0, 0) scale(1); }
+                25% { transform: translate(60px, 40px) scale(1.05); }
+                50% { transform: translate(-20px, 80px) scale(0.95); }
+                75% { transform: translate(40px, -30px) scale(1.08); }
+            }
+            @keyframes orbFloat2 {
+                0%, 100% { transform: translate(0, 0) scale(1); }
+                25% { transform: translate(-50px, -40px) scale(1.06); }
+                50% { transform: translate(30px, -70px) scale(0.93); }
+                75% { transform: translate(-30px, 20px) scale(1.04); }
+            }
+            @keyframes orbFloat3 {
+                0%, 100% { transform: translate(0, 0) scale(1); }
+                33% { transform: translate(-40px, 50px) scale(1.07); }
+                66% { transform: translate(50px, -30px) scale(0.94); }
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-orbs { display: none; }
+        }
         .hero-overlay {
             position: absolute;
             inset: 0;
@@ -928,6 +989,12 @@
         <!-- Cinematic SVG background -->
         <img class="hero-bg" src="assets/cinematic-bg-v2.svg" alt="Decorative forest background with light rays" aria-hidden="true" />
         <div class="hero-overlay"></div>
+        <!-- Ambient floating orbs for depth -->
+        <div class="hero-orbs" aria-hidden="true">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
         <div class="container">
             <!-- Logo: triple-leaf emblem on forest green -->
             <div class="hero-logo-wrap">
