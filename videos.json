@@ -1,6 +1,6 @@
 {
   "site": "gutwise",
-  "updated": "2026-05-17T16:18:00.000Z",
+  "updated": "2026-05-18T14:08:22.811Z",
   "videos": [
     {
       "id": "gutwise-001",
@@ -16,6 +16,22 @@
       "hook": "Your gut is trying to tell you something",
       "prompt": "Fresh vegetables and tomato slicing",
       "generated": "2026-05-17T16:15:00.000Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-003",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260518/4a95ea654b3eed09a209f3497534b1ab-3c09b0aa-ee98-4751-a466-54a41f0cb830.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAGMt7ERyUQRC01Qho-XYv7li7nVShUxdBiYCqT9zCfvMKF-qL6FrzA-vEo_L5Pm79haeySYheKdGCmGgUxIHhvIXOD_M7Nt6tnfqkuRCT_6JXermne1gyBvTqj8nWJ4FNVG-RKleEXQIXLTOFHKw5LW2KpROgRI8RITSW_UV6cCLt29fyiokVrT-XMw0gTkMZ4p4YjDZBZEq1IqmSkhFBnCKJsc_bvuDrAx7xf9UJwC7BoSyfxirU_pcpSwYh-JFVmDEt6gIiATTRU544ie3zDNYRbyaP2QE0HDgPiB2AOXa4i4JXm5lSgFMAE&x-kcdn-pid=112781&ksSecret=6e856ae2c7b8b7a11c30afc75da8959b&ksTime=6a32a9f3",
+      "hook": "Ancient healing, modern science",
+      "prompt": "Hot turmeric golden milk being poured into a ceramic mug",
+      "generated": "2026-05-18T14:05:07.652Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-004",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260518/bc868362337bce24436562d55f44f708-464e70cd-dc65-489a-a7ce-c9430890d445.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAH05cCuzhVQyT6YTfIXAsBacrXpf2-BaV7jHTH4T3H_44lvhutnOJNRsv1EP_yrDY_KciO0vJenhCMDW3_yRyjnKJ-AY0skISaFaFptFMx322JXhNCYHyVwB7btjmIgK29tuB00CZXgEftKiYWARAUZtt-BxFJtdbEwFH1I1xtqRAPDfK1YbYF0Qr0RTB3Yjg7iqOKGZmUTI-9NLt6QeZV6Q0tCGuT-FHkhYcMh_aYPGxoSj4dfrTYhUzYe6jlYP2ZR__D3IiB78BqNs6ZYr6gVmjxzz-Xc4syGi6SOx3vARRhsukFOXCgFMAE&x-kcdn-pid=112781&ksSecret=7d012c8bdfeb020c25f32609638d12f6&ksTime=6a32aa24",
+      "hook": "Fuel your body right",
+      "prompt": "A ripe avocado being sliced open on a wooden board",
+      "generated": "2026-05-18T14:07:33.416Z",
       "posted": false
     }
   ]
