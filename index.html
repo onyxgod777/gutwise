@@ -11,7 +11,9 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; media-src 'self';" /> />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'none'; media-src 'self';" /> />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>GutWise — Reclaim Your Vitality From Within</title>
     <!-- Inline SVG favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230d3b2e' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 12 Q18 22 16 36 Q14 48 24 54 L32 12Z' fill='rgba(251,191,36,0.2)' stroke='%23fbbf24' stroke-width='1.5'/%3E%3Cpath d='M32 12 Q46 22 48 36 Q50 48 40 54 L32 12Z' fill='rgba(251,191,36,0.1)' stroke='%23fbbf24' stroke-width='1'/%3E%3Cpath d='M32 14 L32 48' stroke='%23fbbf24' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%23fbbf24'/%3E%3C/svg%3E" />
@@ -958,7 +960,7 @@
                     <path d="M32 14 L32 48" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                     <circle cx="32" cy="32" r="2.5" fill="#fbbf24"/>
                 </svg>
-                GutWise
+                <i class="fas fa-apple-alt"></i> GutWise
             </a>
             <div class="nav-links">
                 <a href="#philosophy">Philosophy</a>
@@ -1055,7 +1057,7 @@
             </p>
             <a href="#products" class="hero-cta">See the Top Gut Health Products →</a>
             <br />
-            <a href="blog/" class="hero-sub">📖 Read science-backed articles on gut health</a>
+            <a href="blog/" class="hero-sub"><i class="fas fa-book-open"></i> Read science-backed articles on gut health</a>
         </div>
         <!-- Scroll indicator -->
         <div class="scroll-indicator">
@@ -1068,7 +1070,7 @@
     <!-- ═══ ASMR REELS ═══ -->
     <section class="video-reel" id="reels" aria-label="ASMR gut health video reels">
         <div class="container">
-            <span class="section-label">🎬 Reels</span>
+            <span class="section-label"><i class="fas fa-video"></i> Reels</span>
             <h2>Watch &amp; Heal</h2>
             <p class="subtitle">Short, satisfying ASMR videos to calm your nervous system and inspire better gut health habits.</p>
             <div class="reel-grid" id="reelGrid">
@@ -1113,7 +1115,7 @@
             </p>
             <div class="philosophy-grid">
                 <div class="wisdom-card">
-                    <div class="icon">🧠</div>
+                    <div class="icon"><i class="fas fa-brain"></i></div>
                     <h3>Gut-Brain Axis</h3>
                     <p style="font-size:0.9rem;color:#4b5563;">
                         Your gut produces ~90% of your body's serotonin — the same
@@ -1122,7 +1124,7 @@
                     </p>
                 </div>
                 <div class="wisdom-card">
-                    <div class="icon">⚖️</div>
+                    <div class="icon"><i class="fas fa-scale-balanced"></i></div>
                     <h3>Natural Laws</h3>
                     <p style="font-size:0.9rem;color:#4b5563;">
                         Your body follows creational principles — cause and effect,
@@ -1131,7 +1133,7 @@
                     </p>
                 </div>
                 <div class="wisdom-card">
-                    <div class="icon">🌿</div>
+                    <div class="icon"><i class="fas fa-leaf"></i></div>
                     <h3>Self-Discipline</h3>
                     <p style="font-size:0.9rem;color:#4b5563;">
                         No one can heal your body for you. True change requires
@@ -1198,7 +1200,7 @@
             <div class="product-grid">
 
                 <div class="product-card featured">
-                    <div class="product-icon">🍵</div>
+                    <div class="product-icon"><i class="fas fa-mug-hot"></i></div>
                     <span class="rating">⭐ #1 Pick</span>
                     <h3>Cardio Slim Tea</h3>
                     <p>Natural tea blend with green tea, ginger, hibiscus, oolong &amp; dandelion. Supports heart health, digestion, and natural energy.</p>
@@ -1208,8 +1210,8 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-icon">⚡</div>
-                    <span class="rating">🔥 Metabolism Support</span>
+                    <div class="product-icon"><i class="fas fa-bolt"></i></div>
+                    <span class="rating"><i class="fas fa-fire"></i> Metabolism Support</span>
                     <h3>Superconductor Slim</h3>
                     <p>Unique plant-based formula with Egyptian Blue Vervain, Eleuthero Root &amp; Peppermint Oil. Supports healthy metabolism and weight management naturally.</p>
                     <div class="product-cta-wrap">
@@ -1218,8 +1220,8 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-icon">🦠</div>
-                    <span class="rating">🌿 Gut Health Pick</span>
+                    <div class="product-icon"><i class="fas fa-bacteria"></i></div>
+                    <span class="rating"><i class="fas fa-leaf"></i> Gut Health Pick</span>
                     <h3>LeanBiome</h3>
                     <p>Ivy League-researched probiotic formula. Supports healthy gut flora, metabolism, and lasting weight management — naturally.</p>
                     <div class="product-cta-wrap">
@@ -1228,8 +1230,8 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-icon">🧠</div>
-                    <span class="rating">🧠 Brain-Gut Axis</span>
+                    <div class="product-icon"><i class="fas fa-brain"></i></div>
+                    <span class="rating"><i class="fas fa-brain"></i> Brain-Gut Axis</span>
                     <h3>NeuroPrime</h3>
                     <p>Clinically researched cognitive support targeting sleep, memory, and neural health — because a healthy gut fuels a sharp mind.</p>
                     <div class="product-cta-wrap">
@@ -1238,8 +1240,8 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-icon">🧬</div>
-                    <span class="rating">🧬 Gut Health Powerhouse</span>
+                    <div class="product-icon"><i class="fas fa-dna"></i></div>
+                    <span class="rating"><i class="fas fa-dna"></i> Gut Health Powerhouse</span>
                     <h3>VivoGut</h3>
                     <p>14 premium nutrients, herbs &amp; minerals backed by research. Targets digestion, nutrient absorption, and gut lining repair — all in one formula.</p>
                     <div class="product-cta-wrap">
@@ -1281,7 +1283,7 @@
         <h2>Ready To Feel Whole Again?</h2>
         <p>Your body has the wisdom. Give it what it needs to heal, restore, and thrive.</p>
         <a href="#products" class="hero-cta">Browse Products →</a>
-        <p style="margin-top:16px;"><a href="blog/" style="color:rgba(255,255,255,0.8);text-decoration:underline;">📖 Read the GutWise Blog →</a></p>
+        <p style="margin-top:16px;"><a href="blog/" style="color:rgba(255,255,255,0.8);text-decoration:underline;"><i class="fas fa-book-open"></i> Read the GutWise Blog →</a></p>
     </div>
 
     <!-- ═══ FOOTER ═══ -->
@@ -1298,12 +1300,12 @@
                 <a href="privacy.html">Privacy Policy</a> ·
                 <a href="tos.html">Terms of Service</a> ·
                 <a href="blog/">Blog</a> ·
-                <a href="https://ai-body.thealpha-secret.xyz">🤖 AI Body</a> ·
+                <a href="https://ai-body.thealpha-secret.xyz"><i class="fas fa-robot"></i> AI Body</a> ·
                 <a href="https://pi.thealpha-secret.xyz">π True Pi</a>
             </p>
             <!-- ── Support ── -->
             <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e5e7eb;">
-                <p style="margin:0 0 10px;font-size:0.8rem;color:#6b7280;">☕ Support this work</p>
+                <p style="margin:0 0 10px;font-size:0.8rem;color:#6b7280;"><i class="fas fa-mug-saucer"></i> Support this work</p>
                 <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;align-items:center;font-size:0.8rem;">
                     <!-- ninthprime: Replace YOURNAME with your Buy Me a Coffee username -->
                     <a href="https://buymeacoffee.com/onyxg777" target="_blank" style="display:inline-flex;align-items:center;gap:4px;padding:6px 14px;background:#FFDD00;color:#000;border-radius:6px;text-decoration:none;font-weight:600;">☕ Buy Me a Coffee</a>
