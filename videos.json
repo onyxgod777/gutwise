@@ -1,6 +1,6 @@
 {
   "site": "gutwise",
-  "updated": "2026-05-18T14:08:22.811Z",
+  "updated": "2026-05-19T14:08:52.190Z",
   "videos": [
     {
       "id": "gutwise-001",
@@ -32,6 +32,22 @@
       "hook": "Fuel your body right",
       "prompt": "A ripe avocado being sliced open on a wooden board",
       "generated": "2026-05-18T14:07:33.416Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-005",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260519/79a66830773afb6c366cd4f2db3c75f8-c3f11857-8b94-4105-9af7-0b192f41a765.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAHn-6H-Z9HQ4d1A24NFn6hQhEKzD89hrgpu_riX_oN3d6qD4oLGEfU6uT_4Y2Bjdq5oGfqjW9yL2WQuzXtZ5Vi0sViMhIaJ7jV9uuQZmKoribGvRcRpVGNuAGu5K1CNOW79MZlc3FDepEOzRiXBBfsTnxsZvVX0UvqkMvB3xYWe3Ufx2mjyDKwbXOPYiNAQl9c4KSniNsu7UwHS1UQSlRHafd4a_HxcnzcVtRmm1teYHhoS2DBhfBJlmsA0VO38d82MTxzXIiB5R0QO9ILKKbFDL15oZ5aU5D8WRePLku34vwo7Pj8cLSgFMAE&x-kcdn-pid=112781&ksSecret=e577aba07e1dd3151a09778ab27abfee&ksTime=6a33fb7c",
+      "hook": "Health starts in nature",
+      "prompt": "A person walking through a sunlit forest path, dappled light filtering through leaves, dewdrops on ferns, peaceful morning atmosphere, slow motion steps, connection with nature, golden hour lighting",
+      "generated": "2026-05-19T14:08:52.190Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-006",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260519/9de54db7961e641c17ad76eda160e4a5-a504b892-e45d-4dd0-9d9a-e998835c9304.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAFjkoHeJFpD_eU8TjCA-OhJOTC0crMYLtEo6pdgU4GtshK_IyRQ2YIglX0yO-SUGjBYwdQ0I_RkBCKpZ_seh6jr91pJCyZzFvPEnfSTtS41asgkTDYPE7mdlk0bVK1IV_khSXgB3wx0kNTxidtbC71yiXtj1vZhDV1YWureJ7hJVgVWrMakmmZPqOiBF286GVLOSddCTx72IdNXKNsmD73fYtS84WA4Jt7hgpzjmd3kiBoSqwnSbF-azU9cbKSOb8doGVG2IiAGh0C1qOXYStl-WKvT0KyVJIu0XIsLrGkyBgEwjc2qgygFMAE&x-kcdn-pid=112781&ksSecret=f055d33bda5f8d0b6bd09b33707588d2&ksTime=6a33fbb9",
+      "hook": "Find your calm",
+      "prompt": "Rain falling on fresh green leaves in a garden, water droplets sliding off tips, rich green foliage, overcast soft lighting, calming rain sounds suggested visually, macro shot with shallow depth of field",
+      "generated": "2026-05-19T14:08:52.190Z",
       "posted": false
     }
   ]
