@@ -1,6 +1,6 @@
 {
   "site": "gutwise",
-  "updated": "2026-05-19T14:08:52.190Z",
+  "updated": "2026-05-21T14:06:55.305Z",
   "videos": [
     {
       "id": "gutwise-001",
@@ -44,10 +44,26 @@
     },
     {
       "id": "gutwise-006",
-      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260519/9de54db7961e641c17ad76eda160e4a5-a504b892-e45d-4dd0-9d9a-e998835c9304.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAFjkoHeJFpD_eU8TjCA-OhJOTC0crMYLtEo6pdgU4GtshK_IyRQ2YIglX0yO-SUGjBYwdQ0I_RkBCKpZ_seh6jr91pJCyZzFvPEnfSTtS41asgkTDYPE7mdlk0bVK1IV_khSXgB3wx0kNTxidtbC71yiXtj1vZhDV1YWureJ7hJVgVWrMakmmZPqOiBF286GVLOSddCTx72IdNXKNsmD73fYtS84WA4Jt7hgpzjmd3kiBoSqwnSbF-azU9cbKSOb8doGVG2IiAGh0C1qOXYStl-WKvT0KyVJIu0XIsLrGkyBgEwjc2qgygFMAE&x-kcdn-pid=112781&ksSecret=f055d33bda5f8d0b6bd09b33707588d2&ksTime=6a33fbb9",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260519/9de54db7961e641c17ad76eda160e4a5-a504b892-e45d-4dd0-9d9a-e998835c9304.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAFjkoHeJFpD_eU8TjCA-OhJOTC0crMYLtEo6pdgU4GtshK_IyRQ2YIglX0yO-SUGjBYwdQ0I_RkBCKpZ_seh6jr91pJCyZzFvPEnfSTtS41asgkTDYPE7mdlk0bVK1IV_khSXgB3wx0kNTxidtbC71yiXtj1vZhDV1YWureJ7hJVgVWrMakmmZPqOiBF286GVLOSddCTx72IdNXKNsmD73fYtS84WA4Jt7hgpzjmd3kiBoSqwnSbF-azU9cbKSOb8doGVG2IiAGh0C1qOXYStl-WKvT0KyVJIu0XIsLrGkyBgEwjc2qgygFMAE&x-kcdn-pid=112781&ksSecret=f055d33bda5f8b0d6bd09b33707588d2&ksTime=6a33fbb9",
       "hook": "Find your calm",
       "prompt": "Rain falling on fresh green leaves in a garden, water droplets sliding off tips, rich green foliage, overcast soft lighting, calming rain sounds suggested visually, macro shot with shallow depth of field",
       "generated": "2026-05-19T14:08:52.190Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-007",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260521/76dde2745a538281eabcf2e29e0d0de4-ffff6af1-898f-48b2-b355-4a027b4a99c3.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAFXdgZQ6P5V-zQgFr1OmDbZm1Zr37wUNr9yBg-dkQSPKEBugp5yKmAyQKtL9Xpt9BAXsyolFIS8f6rzTLsr7xCcee7ejZAqZGlG_3aAvPU5XxZ_8uKuVBAC-OIpsrBDVJO31uaGNeaNnaewl9uRpOLaPSBN2rLQcxoP1tgJYkQr1c94TV_fRj1X83U6P_cyox856HyKfaAYYQrKFbpC2mKADRhs9xOrkpwyvLUebvMhNhoSBJLSFVs3h7NB0bSL9MQcdiMhIiA2_K7amxzzpQXCKb9K9zIjFZjgw_vrEQ4_W393gQSelCgFMAE&x-kcdn-pid=112781&ksSecret=5da0e703562282a6156cce0e4842ee56&ksTime=6a369e19",
+      "hook": "The gut health secret they don't tell you",
+      "prompt": "A bowl of colorful mixed berries being drizzled with golden honey, honey flowing in slow motion, berries glistening, morning light, white ceramic bowl, rustic wooden table, fresh and natural atmosphere",
+      "generated": "2026-05-21T14:06:55.305Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-008",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260521/ab8ebb1d63412a9029bc8c0ffe4572e7-b217fdcd-ebb9-437d-811b-62a81e6b43d7.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAHLK59uZD6rEvmp6aQs_zeVPzlFitDKBg-HaG2-zzMikjgSbn5NUvqGdjDyyy7yQ57lm-6J09OaQURFmQkNpLNfyrisSI3z9U813T9P89x646aK72ENIm099pebzQ7vhBlawbX4tQo4EdiiFks5_T4mNyroWoSZmwscMAVl_xOBGuu8wvGExyxuTTahrffg2-XDhSCSPuPzVLTQzDvZlb9-mPAtUvPK7Ofu7hwthX90GhoSf6vJMx190TgGD4GP2nZFxCPDIiCAVLZVhK7c9USOAf4hXnjHf4_pCp7FkUDmvydZoMeaYSgFMAE&x-kcdn-pid=112781&ksSecret=218d834ac2ebda553f3a3ebd3131c974&ksTime=6a369e4b",
+      "hook": "Ancient healing, modern science",
+      "prompt": "Hot turmeric golden milk being poured into a ceramic mug, steam rising in curls, deep golden color, cinnamon stick garnish, cozy kitchen setting, warm afternoon light, soothing atmosphere, slow motion pour",
+      "generated": "2026-05-21T14:06:55.305Z",
       "posted": false
     }
   ]
