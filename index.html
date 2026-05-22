@@ -1416,7 +1416,7 @@
             });
         }
 
-        // ── Scroll Reveal ──
+        // ── Scroll Reveal with Staggered Delays ──
         var targets = document.querySelectorAll(
             '.wisdom-card, .product-card, .step, .stat-card'
         );
@@ -1428,9 +1428,17 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
             targets.forEach(function(el) {
                 el.classList.add('reveal');
+                // Staggered delay: use child index within parent grid
+                var parent = el.parentElement;
+                if (parent) {
+                    var idx = Array.prototype.indexOf.call(parent.children, el);
+                    if (idx > 0) {
+                        el.style.transitionDelay = (idx * 0.1) + 's';
+                    }
+                }
                 observer.observe(el);
             });
         } else {
