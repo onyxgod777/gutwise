@@ -976,6 +976,24 @@
             .back-to-top { transition: opacity 0.15s ease; }
         }
 
+        /* ── Hero Entrance Animations ── */
+        @media (prefers-reduced-motion: no-preference) {
+            @keyframes heroFadeIn {
+                from { opacity: 0; transform: translateY(24px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+            .hero-entrance {
+                opacity: 0;
+                will-change: transform, opacity;
+            }
+            .hero-entrance.animate-in {
+                animation: heroFadeIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-entrance { opacity: 1 !important; transform: none !important; }
+        }
+
         /* ── Scroll Reveal Animations ── */
         @media (prefers-reduced-motion: no-preference) {
             .reveal {
@@ -1050,7 +1068,7 @@
         </div>
         <div class="container">
             <!-- Logo: triple-leaf emblem on forest green -->
-            <div class="hero-logo-wrap">
+            <div class="hero-logo-wrap hero-entrance" style="transition-delay:0.1s">
             <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GutWise emblem - a leaf symbolizing natural gut health">
                 <defs>
                     <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
@@ -1101,14 +1119,14 @@
                 <circle cx="100" cy="100" r="7" fill="none" stroke="rgba(251,191,36,0.3)" stroke-width="1" />
             </svg>
             </div>
-            <h1>90% of Your Serotonin Starts in Your Gut — Heal Your Gut, Transform Your Life</h1>
-            <p>
+            <h1 class="hero-entrance" style="transition-delay:0.25s">90% of Your Serotonin Starts in Your Gut — Heal Your Gut, Transform Your Life</h1>
+            <p class="hero-entrance" style="transition-delay:0.4s">
                 Energy, mood, clarity — it all starts in your microbiome.
                 Discover the natural path to a stronger, more vibrant you.
             </p>
-            <a href="#products" class="hero-cta">See the Top Gut Health Products →</a>
+            <a href="#products" class="hero-cta hero-entrance" style="transition-delay:0.55s">See the Top Gut Health Products →</a>
             <br />
-            <a href="blog/" class="hero-sub"><i class="fas fa-book-open"></i> Read science-backed articles on gut health</a>
+            <a href="blog/" class="hero-sub hero-entrance" style="transition-delay:0.7s"><i class="fas fa-book-open"></i> Read science-backed articles on gut health</a>
         </div>
         <!-- Scroll indicator -->
         <div class="scroll-indicator">
@@ -1396,6 +1414,26 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         'use strict';
+
+        // ── Hero Entrance Animation ──
+        var heroElements = document.querySelectorAll('.hero-entrance');
+        if (heroElements.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            heroElements.forEach(function(el, i) {
+                var staggerDelay = parseFloat(el.style.transitionDelay) * 1000 || (100 + i * 150);
+                setTimeout(function() {
+                    el.classList.add('animate-in');
+                    // Clean up after animation to restore competing hover/animation styles
+                    el.addEventListener('animationend', function() {
+                        el.classList.remove('animate-in', 'hero-entrance');
+                    }, { once: true });
+                }, staggerDelay);
+            });
+        } else {
+            // Reduced motion: just show everything
+            heroElements.forEach(function(el) {
+                el.classList.remove('hero-entrance');
+            });
+        }
 
         // ── Hamburger Menu Toggle ──
         var hamburger = document.querySelector('.hamburger');
