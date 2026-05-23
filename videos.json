@@ -1,6 +1,6 @@
 {
   "site": "gutwise",
-  "updated": "2026-05-22T14:06:56.140Z",
+  "updated": "2026-05-23T14:08:47.207Z",
   "videos": [
     {
       "id": "gutwise-001",
@@ -72,6 +72,22 @@
       "hook": "Hydrate. Heal. Repeat.",
       "prompt": "Fresh lemon slices floating in a pitcher of water with ice and mint leaves, sunlight passing through the water, bubbles rising, refreshing and clean aesthetic, slow motion ripples, summer kitchen setting",
       "generated": "2026-05-22T14:06:56.140Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-010",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260523/142d1ec118ac3172929b4152373d95b9-131e5fb8-747a-4c98-a940-f23539117603.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAGJSk8lkXhK93g2B552e7_xZa9leUi3qNOW9OIadAU5AbDT4wIarPLcf3bTbIcPB56PhFM6CKgEDuYyDzLl-wA4g0HNL4Uxs1Mml36ndZrMqL0hNmP-DKjMo8GUX45hfbbsiEKwuTb5vJk8tGKXPdbyuPqRU3zTqMEVJPjM1upJbccieggNDon7M-DtD7xQZkHZCDZzyAacZxYfZPa_MmAbm5oE8FZSSSmyJmiz4z_D2BoSxWNjcgh9zqt_zDfpYBGATs3tIiBBx1SCsnqyrtMA5IOcGabgQtIzOVr5U3CZoXRQFsuY6igFMAE&x-kcdn-pid=112781&ksSecret=5bc47c079ea08abdfdfa26775d7e6c88&ksTime=6a3941be",
+      "hook": "One cup at a time",
+      "prompt": "A tea ceremony scene with steam rising from a porcelain cup, loose tea leaves unfurling in hot water, amber liquid, serene minimalist setting, soft window light, meditative atmosphere, slow motion steam",
+      "generated": "2026-05-23T14:08:01.177Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-011",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260523/7d97b9c28e6f5f5d7250ea5b5234293f-cc524cb1-bd4e-49bf-923d-d3ffb9a552bd.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAHq2uoU3kei-TbYIY9YIxJCV-z-ER0zmlDs8lt9NfFagI3JrcYyw4EMbGpHUB8AGq8zZsroQWJtgwJxJ1Pv5dDXq4Ly0OhJk7wVTMn9pf43E3MQ7AYwUOixMNDYW56Gjab5FlaFRsc85EMsx10AWYGorWv0C__QCSdjQVTQuxdvgauG-FR8wOF3-nDj3uISyct5EUO2xiM9qY1KI1K8JdXmGqi2s7HIK_bewAdMmag3KxoSMiIwzDkRLkXJDo0Gm30rVg5KIiAtF9UH1jZVFDauurtNdLwSnthcI6gDTHYV3FTgL8PRlygFMAE&x-kcdn-pid=112781&ksSecret=b79eee81e7ec73af70ef83e0ad3a438a&ksTime=6a3941ed",
+      "hook": "Fix your gut in 30 days",
+      "prompt": "A glass of fresh green smoothie being poured into a clear cup in slow motion, vibrant green liquid swirling, condensation on glass, bright morning sunlight streaming through a window, natural kitchen setting, cinematic quality",
+      "generated": "2026-05-23T14:08:47.207Z",
       "posted": false
     }
   ]
