@@ -813,10 +813,51 @@
             border-radius: 50%;
             box-shadow: 0 4px 12px rgba(13,59,46,0.15);
             transition: transform .3s ease, box-shadow .3s ease;
+            position: relative;
+            isolation: isolate;
+        }
+        /* Animated gold ring border on step numbers */
+        @media (prefers-reduced-motion: no-preference) {
+            .step .num::before {
+                content: '';
+                position: absolute;
+                inset: -3px;
+                border-radius: 50%;
+                padding: 3px;
+                background: conic-gradient(
+                    #fbbf24,
+                    #fcd34d,
+                    #f59e0b,
+                    #fbbf24,
+                    #fcd34d,
+                    #f59e0b,
+                    #fbbf24
+                );
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+                opacity: 0;
+                transform: scale(0.85) rotate(0deg);
+                transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                will-change: transform;
+                z-index: -1;
+            }
+            @keyframes goldRingSpin {
+                to { transform: scale(1) rotate(360deg); }
+            }
+            .step:hover .num::before {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+                animation: goldRingSpin 3s linear infinite;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .step .num::before { display: none; }
         }
         .step:hover .num {
             transform: scale(1.08);
-            box-shadow: 0 6px 20px rgba(13,59,46,0.2);
+            box-shadow: 0 6px 20px rgba(13,59,46,0.3);
         }
         .step h3 { font-size: 1.05rem; color: #0d3b2e; }
         .step p { font-size: 0.9rem; color: #4b5563; max-width: 260px; margin: 0 auto; }
