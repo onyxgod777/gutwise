@@ -1,6 +1,6 @@
 {
   "site": "gutwise",
-  "updated": "2026-05-23T14:08:47.207Z",
+  "updated": "2026-05-24T14:25:07.067Z",
   "videos": [
     {
       "id": "gutwise-001",
@@ -88,6 +88,14 @@
       "hook": "Fix your gut in 30 days",
       "prompt": "A glass of fresh green smoothie being poured into a clear cup in slow motion, vibrant green liquid swirling, condensation on glass, bright morning sunlight streaming through a window, natural kitchen setting, cinematic quality",
       "generated": "2026-05-23T14:08:47.207Z",
+      "posted": false
+    },
+    {
+      "id": "gutwise-012",
+      "url": "https://v16-kling-fdl.klingai.com/bs2/upload-ylab-stunt-sgp/muse/885006838557708306/VIDEO/20260524/a627f130e40ba1a0c8c3fa1ade20b281-9fd63528-6e2b-46be-b4c7-0e394694ebb3.mp4?cacheKey=ChtzZWN1cml0eS5rbGluZy5tZXRhX2VuY3J5cHQSsAG6RdmGX0qtPTFmhNimO7xuWlvATxc93jrifMzwjYi0aBgolGm0psOIkFq56YtfQWFVpCeHV8IdLO9jRAoC8A8oAOTFLm1RDxVgs9wCATdK6NG8kWrCtXyynOmi1H8zGhjbEFw0y4BEapghE7cwrMrqKjgVU7d4BWZjnQRllp3nb_ft616DMod2-ooTMSXw6_hHf1R1V0ZdqZtLEPUny-7S7hdFazKqrKCXhYFzsFjFchoS2DBhfBJlmsA0VO38d82MTxzXIiDWEpxhbkL1h7CeN8_fmNh7lfUddBJLuFTlrdDSWyK_figFMAE&x-kcdn-pid=112781&ksSecret=4a8ddf36fb1882a2f3a6c72ecb520fd3&ksTime=6a3a96f8",
+      "hook": "Your gut is trying to tell you something",
+      "prompt": "Fresh vegetables and herbs arranged on a rustic wooden cutting board, a knife slicing through a ripe tomato, juice dripping, vibrant red and green colors, natural sunlight, farmhouse kitchen aesthetic, slow motion slice",
+      "generated": "2026-05-24T14:25:07.067Z",
       "posted": false
     }
   ]
