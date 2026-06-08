@@ -250,4 +250,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://gutwise.thealpha-secret.xyz/blog/leaky-gut-dementia-neuroinflammation-cognitive-decline.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gutwise.thealpha-secret.xyz/blog/gut-health-athletic-performance-microbiome-endurance-recovery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
