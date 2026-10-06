@@ -648,4 +648,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
 </url>
+<url>
+    <loc>https://gutwise.thealpha-secret.xyz/blog/gut-virome-bacteriophages-microbiome.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
 </urlset>
